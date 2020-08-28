@@ -5,11 +5,11 @@
 #### Back End
 
 - [ ] 1.1. Node.js e Express
-- [ ] 1.1.1. Rotas e recursos
-- [ ] 1.1.2. Métodos HTTP
-- [ ] 1.1.3. Tipos de Parâmetros
-- [ ] 1.2. Nodemon
-- [ ] 1.3. Insomnia
+- [x] 1.1.1. Rotas e recursos
+- [x] 1.1.2. Métodos HTTP
+- [x] 1.1.3. Tipos de Parâmetros
+- [x] 1.2. Nodemon: `npm install nodemon -D`
+- [x] 1.3. Insomnia
 - [ ] 1.4. Banco de Dados
 - [ ] 1.5. Back-end
 - [ ] 1.6. Cors
