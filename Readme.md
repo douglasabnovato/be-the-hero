@@ -4,7 +4,8 @@
 
 #### Back End
 
-- [ ] 1.1. Node.js e Express
+- [ ] 1. Back End - NodeJS 
+- [x] 1.1. Node.js e Express
 - [x] 1.1.1. Rotas e recursos
 - [x] 1.1.2. Métodos HTTP
 - [x] 1.1.3. Tipos de Parâmetros
