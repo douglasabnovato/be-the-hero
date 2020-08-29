@@ -24,6 +24,9 @@ const app = express();
 
  /**
   * Tipos de Banco de dados
+  * 
+  * SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+  * NoSQL: MongoDB, CouchDB
   */
 
 app.get('/users/:id', (request, response) =>{

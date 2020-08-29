@@ -18,7 +18,10 @@
 - [x] 1.1.3.3 Request Body: o corpo da requisição
 - [x] 1.2. Nodemon: `npm install nodemon -D`. Executar: `npm start`
 - [x] 1.3. Insomnia : `http://localhost:3333/users`
-- [ ] 1.4. Banco de Dados
+- [x] 1.4. Banco de Dados
+- [x] 1.4.1. SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+- [x] 1.4.2. NoSQL: MongoDB, CouchDB
+- [x] 1.4.3. O projeto usará SQLite
 - [ ] 1.5. Back-end
 - [ ] 1.6. Cors
 - [ ] 1.7. Subindo aplicação para o github
