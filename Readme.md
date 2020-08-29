@@ -25,7 +25,10 @@
 - [ ] 1.5. Back-end
 - [x] 1.5.1. Driver: SELECT * FROM users
 - [x] 1.5.2. Query Builder: table('users').select('*').where() 
-- [ ] 1.5.3. O projeto usará Query Builder, com a ferramenta `Knex.js`
+- [x] 1.5.3. O projeto usará Query Builder, com a ferramenta `Knex.js`
+- [x] 1.5.4. Instalação do Knex: npm install knex
+- [x] 1.5.5. Instalação do SQLite: npm install sqlite3
+- [ ] 1.5.6. Configurar conexão: npx knex init : knexfile.js
 - [ ] 1.6. Cors
 - [ ] 1.7. Subindo aplicação para o github
 
