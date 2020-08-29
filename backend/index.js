@@ -21,9 +21,11 @@ const app = express();
  * Route Params: parâmetros utilizados para identificar recursos
  * Request Body: o corpo da requisição
  */
-app.get('/users', (req, res) =>{
-    return res.json({
-        evento: 'Be The Hero',
+app.get('/users', (request, response) =>{
+    const params = request.query;
+    console.log(params);
+    return response.json({
+        evento: 'BeTheHero',
         trainee: '@douglasabnovato'
     });
 });
