@@ -19,14 +19,19 @@ const app = express();
  * 
  * Query Params: parâmetros nomeados enviados na rota após "?" (filtros e paginação)
  * Route Params: parâmetros utilizados para identificar recursos
- * Request Body: o corpo da requisição
+ * Request Body: o corpo da requisição, utilizado para criar ou alterar recursos
  */
-app.get('/users', (request, response) =>{
-    const params = request.query;
+
+ /**
+  * Tipos de Banco de dados
+  */
+
+app.get('/users/:id', (request, response) =>{
+    const params = request.params;
     console.log(params);
     return response.json({
-        evento: 'BeTheHero',
-        trainee: '@douglasabnovato'
+        evento: 'Be The Hero',
+        trainee: 'douglasabnovato'
     });
 });
 app.listen(3333);
