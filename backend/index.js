@@ -29,6 +29,11 @@ const app = express();
   * NoSQL: MongoDB, CouchDB
   */
 
+/**
+ * Driver: SELECT * FROM users
+ * Query Builder: table('users').select('*').where() 
+ */
+
 app.get('/users/:id', (request, response) =>{
     const params = request.params;
     console.log(params);

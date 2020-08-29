@@ -23,6 +23,9 @@
 - [x] 1.4.2. NoSQL: MongoDB, CouchDB
 - [x] 1.4.3. O projeto usará SQLite
 - [ ] 1.5. Back-end
+- [x] 1.5.1. Driver: SELECT * FROM users
+- [x] 1.5.2. Query Builder: table('users').select('*').where() 
+- [ ] 1.5.3. O projeto usará Query Builder, com a ferramenta `Knex.js`
 - [ ] 1.6. Cors
 - [ ] 1.7. Subindo aplicação para o github
 
