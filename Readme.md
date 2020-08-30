@@ -44,6 +44,9 @@
 - [x] 1.6.2.8. Entrar em contato com a ONG (whatsapp e email)
 - [x] 1.7. Configurar as migrations
 - [x] 1.7.1. um controle de versão de db 
+- [x] 1.7.2. criar a primeira migration: `npx knex migrate:make create_ongs` 
+- [x] 1.7.3. Warning: useNullAsDefault 
+- [x] 1.8. Criar tabela com Knex na migrations
 - [ ] 1.6. Cors
 - [ ] 1.7. Subindo aplicação para o github
 
