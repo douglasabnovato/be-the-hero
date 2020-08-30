@@ -47,8 +47,16 @@
 - [x] 1.7.2. criar a primeira migration: `npx knex migrate:make create_ongs` 
 - [x] 1.7.3. Warning: useNullAsDefault 
 - [x] 1.8. Criar tabela com Knex na migrations
-- [ ] 1.6. Cors
-- [ ] 1.7. Subindo aplicação para o github
+- [x] 1.8.1. Configurar o arquivo
+- [x] 1.8.2. `npx knex migrate:latest`
+- [x] 1.9. Criar a migration incidents
+- [x] 1.9.1. `npx knex migrate:make create_incidents`
+- [x] 1.9.2. `npx knex migrate:latest`
+- [x] 1.9.3. `npx knex migrate:rollback`: desfazer a criação da migration
+- [x] 1.9.4. `npx knex migrate:state`: desfazer a criação da migration
+- [x] 1.10. Cadastro de uma nova ong
+- [ ] 1.15. Cors
+- [ ] 1.16. Subindo aplicação para o github
 
 #### Front End
 
