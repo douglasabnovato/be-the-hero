@@ -56,9 +56,9 @@
 - [x] 1.9.4. `npx knex migrate:state`: desfazer a criação da migration
 - [x] 1.10. Cadastro de uma nova ong
 - [x] 1.10.1. routes
-- [ ] 1.10.2. Insomnia: requisições 
-- [ ] 1.10.2.1. URL: http://localhost:3333/ongs
-- [ ] 1.10.2.2. Corpo:
+- [x] 1.10.2. Insomnia: requisições 
+- [x] 1.10.2.1. URL: http://localhost:3333/ongs
+- [x] 1.10.2.2. Corpo:
 ````json
 {
 	"name":"APAD",
@@ -68,6 +68,8 @@
 	"uf":"Rio de Janeiro"
 }
 ````
+- [x] 1.10.2.3. Criar id: pacote crypto
+- [x] 1.10.2.4. Conexão com banco de dados
 - [ ] 1.15. Cors
 - [ ] 1.16. Subindo aplicação para o github
 
