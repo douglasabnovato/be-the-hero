@@ -72,7 +72,7 @@
 - [x] 1.10.2.4. Conexão com banco de dados
 - [x] 1.10.2.4.1. corrigindo a criação das migration
 - [x] 1.11. Rota para listar todas as ongs: /ongs
-- [ ] 1.12. Controllers
+- [x] 1.12. Controllers: index (listar) e create (cadastrar) para as ongs
 - [ ] 1.15. Cors
 - [ ] 1.16. Subindo aplicação para o github 
 
