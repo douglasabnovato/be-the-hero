@@ -15,8 +15,7 @@ exports.up = function(knex) {
          * .referencia(a coluna id)
          * .na tabela(ongs)
          */
-        table.foreign('ongs_id').references('id').inTable('ongs');
-
+        table.foreign('ong_id').references('id').inTable('ongs');
     });
 };
 //caso de erro: desfazer o que fez

@@ -72,7 +72,7 @@
 - [x] 1.10.2.4. Conexão com banco de dados
 - [x] 1.10.2.4.1. corrigindo a criação das migration
 - [ ] 1.15. Cors
-- [ ] 1.16. Subindo aplicação para o github
+- [ ] 1.16. Subindo aplicação para o github 
 
 #### Front End
 
