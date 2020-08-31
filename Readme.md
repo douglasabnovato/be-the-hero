@@ -57,6 +57,17 @@
 - [x] 1.10. Cadastro de uma nova ong
 - [x] 1.10.1. routes
 - [ ] 1.10.2. Insomnia: requisições 
+- [ ] 1.10.2.1. URL: http://localhost:3333/ongs
+- [ ] 1.10.2.2. Corpo:
+````json
+{
+	"name":"APAD",
+	"email":"contato@contato.com.br",
+	"whatsapp":"4700000000",
+	"city":"Rio de Janeiro",
+	"uf":"Rio de Janeiro"
+}
+````
 - [ ] 1.15. Cors
 - [ ] 1.16. Subindo aplicação para o github
 
