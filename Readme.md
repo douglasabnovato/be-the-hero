@@ -55,6 +55,8 @@
 - [x] 1.9.3. `npx knex migrate:rollback`: desfazer a criação da migration
 - [x] 1.9.4. `npx knex migrate:state`: desfazer a criação da migration
 - [x] 1.10. Cadastro de uma nova ong
+- [x] 1.10.1. routes
+- [ ] 1.10.2. Insomnia: requisições 
 - [ ] 1.15. Cors
 - [ ] 1.16. Subindo aplicação para o github
 
