@@ -73,6 +73,11 @@
 - [x] 1.10.2.4.1. corrigindo a criação das migration
 - [x] 1.11. Rota para listar todas as ongs: /ongs
 - [x] 1.12. Controllers: index (listar) e create (cadastrar) para as ongs
+- [x] 1.13.1. Cadastrar incidentes
+- [x] 1.13.2. Requisição: IncidentController.js
+- [x] 1.13.3. Routes: /incidents
+- [x] 1.14. Ong logada
+
 - [ ] 1.15. Cors
 - [ ] 1.16. Subindo aplicação para o github 
 
