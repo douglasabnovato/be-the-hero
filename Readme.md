@@ -77,10 +77,12 @@
 - [x] 1.13.2. Requisição: IncidentController.js
 - [x] 1.13.3. Routes: /incidents
 - [x] 1.13.4. Criando incidente a partir da rota
-- [x] 1.14. Ong logada
+- [x] 1.13.5. Listar incidentes
+- [x] 1.14. Routes para deletar incidente
 
-- [ ] 1.15. Cors
-- [ ] 1.16. Subindo aplicação para o github 
+- [ ] 1.20. Ong logada
+- [ ] 1.21. Cors
+- [ ] 1.22. Subindo aplicação para o github 
 
 #### Front End
 
