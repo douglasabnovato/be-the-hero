@@ -1,11 +1,9 @@
 const connection = require('../database/connection');
-const { create } = require('./OngController');
 module.exports = {
     async create(request, response) {
-        const { title, descript, value } = request.body;
-        //cabeçalho: autenticação do usuário
+        const { title, description, value } = request.body; 
         const ong_id = request.headers.authorization;
-        const [ id ] = await connection('incidents').insert({
+        const [id] = await connection('incidents').insert({
             title,
             description,
             value,

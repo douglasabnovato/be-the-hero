@@ -76,6 +76,7 @@
 - [x] 1.13.1. Cadastrar incidentes
 - [x] 1.13.2. Requisição: IncidentController.js
 - [x] 1.13.3. Routes: /incidents
+- [x] 1.13.4. Criando incidente a partir da rota
 - [x] 1.14. Ong logada
 
 - [ ] 1.15. Cors
