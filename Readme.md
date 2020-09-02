@@ -80,7 +80,9 @@
 - [x] 1.13.5. Listar incidentes
 - [x] 1.14. Routes para deletar incidente
 - [x] 1.15. ProfileController: Listar casos específicos de uma ONG
-- [ ] 1.16. Routes de login da Ong  
+- [x] 1.16. Routes de login da Ong: SessionController.js 
+- [x] 1.17. Logout é apenas no front-end 
+- [ ] 1.18. Paginação de todos os incidentes
 
 - [ ] 1.21. Cors
 - [ ] 1.22. Subindo aplicação para o github 
