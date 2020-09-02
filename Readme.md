@@ -101,7 +101,11 @@
 - [x] 2.2.4. **estado**
 - [x] 2.2.5. **imutabilidade**
 - [ ] 2.3. Página de login
-- [ ] 2.3.1. Image and Logo
+- [x] 2.3.1. Image and Logo
+- [x] 2.3.2. index.js e styles.css
+- [x] 2.3.3. Css Global - global.css
+- [x] 2.3.4. Google Fonts
+- [x] 2.3.5. Estrutura do design da tela
 - [ ] 2.4. configuração de rotas
 - [ ] 2.5. cadastro de ongs
 - [ ] 2.6. listagem de casos
