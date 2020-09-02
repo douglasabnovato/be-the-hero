@@ -69,18 +69,19 @@
 }
 ````
 - [x] 1.10.2.3. Criar id: pacote crypto
-- [x] 1.10.2.4. Conexão com banco de dados
+- [x] 1.10.2.4. Conexão com banco de dados 
 - [x] 1.10.2.4.1. corrigindo a criação das migration
 - [x] 1.11. Rota para listar todas as ongs: /ongs
-- [x] 1.12. Controllers: index (listar) e create (cadastrar) para as ongs
+- [x] 1.12. Controllers [ MVC ]: index (listar) e create (cadastrar) para as ongs
 - [x] 1.13.1. Cadastrar incidentes
 - [x] 1.13.2. Requisição: IncidentController.js
 - [x] 1.13.3. Routes: /incidents
 - [x] 1.13.4. Criando incidente a partir da rota
 - [x] 1.13.5. Listar incidentes
 - [x] 1.14. Routes para deletar incidente
+- [x] 1.15. ProfileController: Listar casos específicos de uma ONG
+- [x] 1.16. Routes de login da Ong  
 
-- [ ] 1.20. Ong logada
 - [ ] 1.21. Cors
 - [ ] 1.22. Subindo aplicação para o github 
 
