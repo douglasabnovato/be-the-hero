@@ -94,12 +94,12 @@
 - [x] 2.1.1. De um repositório raiz (omnistack-11), `npx create-react-app frontend`
 - [x] 2.1.2. `npm start` : `http://localhost:3000/`
 - [x] 2.1.3. limpar a estrutura de pastas 
-- [ ] 2.2. Conceitos do ReactJS
-- [ ] 2.2.1. componente
-- [ ] 2.2.2.jsx
-- [ ] 2.2.3.propriedades
-- [ ] 2.2.4.estado
-- [ ] 2.2.5.imutabilidade
+- [x] 2.2. Conceitos do ReactJS
+- [x] 2.2.1. **componente**
+- [x] 2.2.2. **jsx**
+- [x] 2.2.3. **propriedades**
+- [x] 2.2.4. **estado**
+- [x] 2.2.5. **imutabilidade**
 - [ ] 2.3. Página de login
 - [ ] 2.4. configuração de rotas
 - [ ] 2.5. cadastro de ongs
