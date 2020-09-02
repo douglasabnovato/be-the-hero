@@ -84,7 +84,7 @@
 - [x] 1.17. Logout é apenas no front-end 
 - [x] 1.18.1. Paginação de todos os incidentes
 - [x] 1.18.2. Exibição do número total de incidentes cadastrados 
-- [ ] 1.19. Join: relacionar dados de duas tabelas
+- [x] 1.19. Join: relacionar dados de duas tabelas
 
 - [ ] 1.21. Cors
 - [ ] 1.22. Subindo aplicação para o github 
