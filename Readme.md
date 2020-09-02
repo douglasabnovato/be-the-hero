@@ -90,4 +90,22 @@
 
 #### Front End
 
+- [ ] 2. Front End - ReactJS 
+- [x] 2.1.1. `npm start` : `http://localhost:3000/`
+- [x] 2.1.2. limpar a estrutura de pastas 
+- [ ] 2.2. Conceitos do ReactJS
+- [ ] 2.2.1. componente
+- [ ] 2.2.2.jsx
+- [ ] 2.2.3.propriedades
+- [ ] 2.2.4.estado
+- [ ] 2.2.5.imutabilidade
+- [ ] 2.3. Página de login
+- [ ] 2.4. configuração de rotas
+- [ ] 2.5. cadastro de ongs
+- [ ] 2.6. listagem de casos
+- [ ] 2.7. cadastro de novo caso
+- [ ] 2.8. conectando aplicação à api
+- [ ] 2.9. enviar projeto ao github
+
+
 #### Mobile
