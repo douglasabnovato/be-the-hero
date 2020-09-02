@@ -91,8 +91,9 @@
 #### Front End
 
 - [ ] 2. Front End - ReactJS 
-- [x] 2.1.1. `npm start` : `http://localhost:3000/`
-- [x] 2.1.2. limpar a estrutura de pastas 
+- [x] 2.1.1. De um repositório raiz (omnistack-11), `npx create-react-app frontend`
+- [x] 2.1.2. `npm start` : `http://localhost:3000/`
+- [x] 2.1.3. limpar a estrutura de pastas 
 - [ ] 2.2. Conceitos do ReactJS
 - [ ] 2.2.1. componente
 - [ ] 2.2.2.jsx
