@@ -101,6 +101,7 @@
 - [x] 2.2.4. **estado**
 - [x] 2.2.5. **imutabilidade**
 - [ ] 2.3. Página de login
+- [ ] 2.3.1. Image and Logo
 - [ ] 2.4. configuração de rotas
 - [ ] 2.5. cadastro de ongs
 - [ ] 2.6. listagem de casos
