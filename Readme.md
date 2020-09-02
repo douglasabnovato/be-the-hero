@@ -85,9 +85,8 @@
 - [x] 1.18.1. Paginação de todos os incidentes
 - [x] 1.18.2. Exibição do número total de incidentes cadastrados 
 - [x] 1.19. Join: relacionar dados de duas tabelas
-
-- [ ] 1.21. Cors
-- [ ] 1.22. Subindo aplicação para o github 
+- [x] 1.20. Cors: npm install cors
+- [ ] 1.21. Subindo aplicação para o github 
 
 #### Front End
 
