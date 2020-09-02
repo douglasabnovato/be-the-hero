@@ -4,7 +4,7 @@
 
 #### Back End
 
-- [ ] 1. Back End - NodeJS 
+- [x] 1. Back End - NodeJS 
 - [x] 1.1. Node.js e Express
 - [x] 1.1.1. Rotas e recursos
 - [x] 1.1.2. Métodos HTTP
@@ -86,7 +86,7 @@
 - [x] 1.18.2. Exibição do número total de incidentes cadastrados 
 - [x] 1.19. Join: relacionar dados de duas tabelas
 - [x] 1.20. Cors: npm install cors
-- [ ] 1.21. Subindo aplicação para o github 
+- [x] 1.21. Subindo aplicação `Be The Hero` para o github 
 
 #### Front End
 
