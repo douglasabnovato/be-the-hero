@@ -80,7 +80,7 @@
 - [x] 1.13.5. Listar incidentes
 - [x] 1.14. Routes para deletar incidente
 - [x] 1.15. ProfileController: Listar casos específicos de uma ONG
-- [x] 1.16. Routes de login da Ong  
+- [ ] 1.16. Routes de login da Ong  
 
 - [ ] 1.21. Cors
 - [ ] 1.22. Subindo aplicação para o github 
