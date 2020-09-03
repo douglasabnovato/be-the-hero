@@ -108,6 +108,7 @@
 - [x] 2.3.5. Estrutura do design da tela
 - [x] 2.3.6. Feather icons
 - [x] 2.3.7. npm install react-icons
+- [x] 2.3.8. Estilização page logon 
 - [ ] 2.4. configuração de rotas
 - [ ] 2.5. cadastro de ongs
 - [ ] 2.6. listagem de casos

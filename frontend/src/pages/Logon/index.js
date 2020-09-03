@@ -16,7 +16,7 @@ export default function Logon(){
                 <button type="submit">Entrar</button>
                 <a href="/register">
                     <FiLogIn size={16} color="#E02041"/>
-                    Não tenho Cadastro
+                    Não tenho Cadastro.
                 </a>
             </form>
             <img src={ heroesImg } alt="Heroes"/>
