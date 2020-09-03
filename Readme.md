@@ -100,7 +100,7 @@
 - [x] 2.2.3. **propriedades**
 - [x] 2.2.4. **estado**
 - [x] 2.2.5. **imutabilidade**
-- [x] 2.3. Página de login
+- [x] 2.3. Page Logon
 - [x] 2.3.1. Image and Logo
 - [x] 2.3.2. index.js e styles.css
 - [x] 2.3.3. Css Global - global.css
@@ -120,8 +120,10 @@
 - [x] 2.5.1. Estrutura HTML
 - [x] 2.5.2. CSS
 - [x] 2.5.2.1. section
-- [x] 2.5.2.2. form 
-- [ ] 2.6. listagem de casos
+- [x] 2.5.2.2. form  
+- [x] 2.6. Page Profile: listagem de casos: profile.js, styles.css
+- [ ] 2.6.1. Estrutura HTML
+- [ ] 2.6.2. CSS
 - [ ] 2.7. cadastro de novo caso
 - [ ] 2.8. conectando aplicação à api
 - [ ] 2.9. enviar projeto ao github
