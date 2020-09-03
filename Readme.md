@@ -116,8 +116,9 @@
 - [x] 2.4.2.1. Rota Logon 
 - [x] 2.4.3.1. Rota Register 
 - [x] 2.4.4. Component Link: não recarregar a página inteira, apenas em componentes
-- [ ] 2.5. Page Register
-
+- [x] 2.5. Page Register
+- [x] 2.5.1. Estrutura HTML
+- [ ] 2.5.2. CSS 
 
 - [ ] 2.5. cadastro de ongs
 - [ ] 2.6. listagem de casos
