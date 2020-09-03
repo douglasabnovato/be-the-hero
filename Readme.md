@@ -122,7 +122,7 @@
 - [x] 2.5.2.1. section
 - [x] 2.5.2.2. form  
 - [x] 2.6. Page Profile: listagem de casos: profile.js, styles.css
-- [ ] 2.6.1. Estrutura HTML
+- [x] 2.6.1. Estrutura HTML: header
 - [ ] 2.6.2. CSS
 - [ ] 2.7. cadastro de novo caso
 - [ ] 2.8. conectando aplicação à api
