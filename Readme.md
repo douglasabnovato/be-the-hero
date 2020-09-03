@@ -123,8 +123,8 @@
 - [x] 2.5.2.2. form  
 - [x] 2.6. Page Profile: listagem de casos: profile.js, styles.css
 - [x] 2.6.1. HTML e CSS header
-- [ ] 2.6.2. HTML e CSS list
-- [ ] 2.7. cadastro de novo caso
+- [x] 2.6.2. HTML e CSS list
+- [ ] 2.7. NewIncident: cadastro de novo caso  
 - [ ] 2.8. conectando aplicação à api
 - [ ] 2.9. enviar projeto ao github
 
