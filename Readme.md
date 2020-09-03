@@ -110,10 +110,11 @@
 - [x] 2.3.7. npm install react-icons
 - [x] 2.3.8. Estilização page logon 
 - [ ] 2.4. configuração de rotas
-- [x] 2.4.1. `npm install react-router-dom` 
-- [x] 2.4.2. routes.js
-- [x] 2.4.3. configuração de rotas
-- [x] 2.4.4. Rota Logon 
+- [x] 2.4.1.1. `npm install react-router-dom` 
+- [x] 2.4.1.2. routes.js
+- [x] 2.4.1.3. configuração de rotas
+- [x] 2.4.2.1. Rota Logon 
+- [x] 2.4.3.1. Rota Register 
 - [ ] 2.5. cadastro de ongs
 - [ ] 2.6. listagem de casos
 - [ ] 2.7. cadastro de novo caso
