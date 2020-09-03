@@ -118,7 +118,9 @@
 - [x] 2.4.4. Component Link: não recarregar a página inteira, apenas em componentes
 - [x] 2.5. Page Register
 - [x] 2.5.1. Estrutura HTML
-- [ ] 2.5.2. CSS 
+- [x] 2.5.2. CSS
+- [x] 2.5.2.1. section
+- [ ] 2.5.2.2. form
 
 - [ ] 2.5. cadastro de ongs
 - [ ] 2.6. listagem de casos
