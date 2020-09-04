@@ -90,7 +90,7 @@
 
 #### Front End
 
-- [ ] 2. Front End - ReactJS 
+- [x] 2. Front End - ReactJS 
 - [x] 2.1.1. De um repositório raiz (omnistack-11), `npx create-react-app frontend`
 - [x] 2.1.2. `npm start` : `http://localhost:3000/`
 - [x] 2.1.3. limpar a estrutura de pastas 
@@ -145,7 +145,7 @@
 - [x] 2.12. Cadastrar Novo caso
 - [x] 2.12.1. Cadastrar novo caso
 - [x] 2.12.2. Retornar a rota
-- [ ] 2.13. Enviar projeto ao Github
+- [x] 2.13. Enviar projeto ao Github
 
 #### Mobile
 
