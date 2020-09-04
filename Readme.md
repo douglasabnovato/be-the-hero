@@ -141,7 +141,9 @@
 - [x] 2.10. Deletar um incidente
 - [x] 2.10.1. Deletar um incidente do backend
 - [x] 2.10.2. Deletar um incidente do frontend
-- [ ] 2.9. Enviar projeto ao Github
+- [x] 2.11. Logout 
+- [ ] 2.12. Cadastrar Novo caso
+- [ ] 2.13. Enviar projeto ao Github
 
 #### Mobile
 
