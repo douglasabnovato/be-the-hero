@@ -88,7 +88,7 @@
 - [x] 1.20. Cors: npm install cors
 - [x] 1.21. Subindo aplicação `Be The Hero` para o github 
 
-#### Front End
+#### Front End [DONE]
 
 - [x] 2. Front End - ReactJS 
 - [x] 2.1.1. De um repositório raiz (omnistack-11), `npx create-react-app frontend`
