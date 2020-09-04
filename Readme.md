@@ -149,3 +149,26 @@
 
 #### Mobile
 
+- [ ] 3. Mobile - React Native
+- [ ] 3.1. Instalando Expo
+- [ ] 3.2. Criando projeto React Native
+- [ ] 3.3. Executando o projeto 
+- [ ] 3.3.1. No celular
+- [ ] 3.3.2. Emuladores
+- [ ] 3.3.3. Expo Snack
+- [ ] 3.4. Diferenças para o ReactJS
+- [ ] 3.4.1. Elementos HTML
+- [ ] 3.4.2. Semântica
+- [ ] 3.4.3. Estilização
+- [ ] 3.4.3.1. Flexbox
+- [ ] 3.4.3.2. Propriedades
+- [ ] 3.4.3.3. Herança de estilos
+- [ ] 3.4.3.4. Estilização própria
+- [ ] 3.5. Estrutura de pastas
+- [ ] 3.6. Ícone e Splash screen
+- [ ] 3.7. configurando navegação
+- [ ] 3.8. página de casos
+- [ ] 3.9. detalhe do caso
+- [ ] 3.10. abrindo whatsapp e e-mail
+- [ ] 3.11. conexão com api
+- [ ] 3.12. enviar projeto para o Github
