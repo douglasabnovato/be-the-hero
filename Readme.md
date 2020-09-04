@@ -139,6 +139,8 @@
 - [x] 2.9.3. exibir os dados dinamicamente
 - [x] 2.9.4. formatar os dados de preços
 - [ ] 2.10. Deletar um incidente
+- [x] 2.10.1. Deletar um incidente do backend
+- [ ] 2.10.2. Deletar um incidente do frontend
 - [ ] 2.9. Enviar projeto ao Github
 
 #### Mobile
