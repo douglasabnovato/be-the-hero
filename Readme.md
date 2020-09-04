@@ -137,6 +137,7 @@
 - [x] 2.9.1. criar session com usuário
 - [x] 2.9.2. localStorage para disponibilizar session a toda a aplicação
 - [x] 2.9.3. exibir os dados dinamicamente
+- [ ] 2.9.4. formatar exibir dos dados vindos da api
 - [ ] 2.9. Enviar projeto ao Github
 
 #### Mobile
