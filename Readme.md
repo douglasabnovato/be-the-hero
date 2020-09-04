@@ -129,6 +129,10 @@
 - [x] 2.8.1. frontend | `npm start`
 - [x] 2.8.2. backend | `npm start`
 - [x] 2.8.3. instalar cliente http | `npm install axios`
+- [ ] 2.8.4. configuração do frontend com o backend
+- [x] 2.8.4.1. armazenar cada valor dos inputs do frontend em um state 
+- [x] 2.8.4.2. cadastrar informações no bd
+- [ ] 2.8.4.3. enviar o usuário de volta para a página de login
 - [ ] 2.9. Enviar projeto ao Github
 
 #### Mobile
