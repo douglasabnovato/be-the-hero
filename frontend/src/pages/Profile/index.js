@@ -28,6 +28,7 @@ export default function Profile(){
                     Authorization: ongId,
                 }
             });
+            setIncidents(incidents.filter(incident => incident.id !== id))
         } catch (err) {
             alert('Erro ao deletar, tente novamente.')
         }
