@@ -156,10 +156,11 @@
 - [x] 3.2.1. `expo init mobile`
 - [x] 3.2.2. template: `blank` 
 - [x] 3.2.3. cd mobile ; `yarn start`
-- [ ] 3.3. Executando o projeto 
-- [ ] 3.3.1. No celular
-- [ ] 3.3.2. Emuladores: usarei o para Android no Windows
-- [ ] 3.3.3. Expo Snack
+- [x] 3.2.4. `http://localhost:19002/`
+- [x] 3.3. Executando o projeto 
+- [x] 3.3.1. No celular
+- [x] 3.3.2. [Emuladores](https://www.facebook.com/rocketseat/videos/2988252154733623): usarei o para Android no Windows
+- [x] 3.3.3. Expo Snack
 - [ ] 3.4. Diferenças para o ReactJS
 - [ ] 3.4.1. Elementos HTML
 - [ ] 3.4.2. Semântica
