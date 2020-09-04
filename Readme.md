@@ -125,7 +125,11 @@
 - [x] 2.6.1. HTML e CSS header
 - [x] 2.6.2. HTML e CSS list
 - [x] 2.7. NewIncident: cadastro de novo caso  
-- [ ] 2.8. conectando aplicação à api
-- [ ] 2.9. enviar projeto ao github
+- [ ] 2.8. Conectar a aplicação frontend em Reactjs com o backend em Nodejs
+- [x] 2.8.1. frontend | `npm start`
+- [x] 2.8.2. backend | `npm start`
+- [x] 2.8.3. instalar cliente http | `npm install axios`
+- [ ] 2.9. Enviar projeto ao Github
 
 #### Mobile
+
