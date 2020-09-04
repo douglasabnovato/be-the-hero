@@ -150,11 +150,15 @@
 #### Mobile
 
 - [ ] 3. Mobile - React Native
-- [ ] 3.1. Instalando Expo
-- [ ] 3.2. Criando projeto React Native
+- [x] 3.1.1. Instalando Expo: `npm install -g expo-cli`
+- [x] 3.1.2. Expo: `expo -h`
+- [x] 3.2. Criando projeto React Native
+- [x] 3.2.1. `expo init mobile`
+- [x] 3.2.2. template: `blank` 
+- [x] 3.2.3. cd mobile ; `yarn start`
 - [ ] 3.3. Executando o projeto 
 - [ ] 3.3.1. No celular
-- [ ] 3.3.2. Emuladores
+- [ ] 3.3.2. Emuladores: usarei o para Android no Windows
 - [ ] 3.3.3. Expo Snack
 - [ ] 3.4. Diferenças para o ReactJS
 - [ ] 3.4.1. Elementos HTML
