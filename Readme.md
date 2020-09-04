@@ -133,7 +133,10 @@
 - [x] 2.8.4.1. armazenar cada valor dos inputs do frontend em um state 
 - [x] 2.8.4.2. cadastrar informações no bd
 - [x] 2.8.4.3. enviar o usuário de volta para a página de login
-- [ ] 2.9. Fazer Login na aplicação
+- [x] 2.9. Fazer Login na aplicação
+- [x] 2.9.1. criar session com usuário
+- [x] 2.9.2. localStorage para disponibilizar session a toda a aplicação
+- [x] 2.9.3. exibir os dados dinamicamente
 - [ ] 2.9. Enviar projeto ao Github
 
 #### Mobile
