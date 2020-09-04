@@ -142,7 +142,9 @@
 - [x] 2.10.1. Deletar um incidente do backend
 - [x] 2.10.2. Deletar um incidente do frontend
 - [x] 2.11. Logout 
-- [ ] 2.12. Cadastrar Novo caso
+- [x] 2.12. Cadastrar Novo caso
+- [x] 2.12.1. Cadastrar novo caso
+- [x] 2.12.2. Retornar a rota
 - [ ] 2.13. Enviar projeto ao Github
 
 #### Mobile
