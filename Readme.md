@@ -155,12 +155,15 @@
 - [x] 3.2. Criando projeto React Native
 - [x] 3.2.1. `expo init mobile`
 - [x] 3.2.2. template: `blank` 
-- [x] 3.2.3. cd mobile ; `yarn start`
+- [x] 3.2.3. cd mobile ; `yarn start` ou `expo start`
 - [x] 3.2.4. `http://localhost:19002/`
 - [x] 3.3. Executando o projeto 
 - [x] 3.3.1. No celular
 - [x] 3.3.2. [Emuladores](https://www.facebook.com/rocketseat/videos/2988252154733623): usarei o para Android no Windows
 - [x] 3.3.3. Expo Snack
+- [x] 3.3.4. Expo cli: `yarn global add expo-cli` 
+- [x] 3.3.5.1. Rodar npm start na aplicação 
+- [x] 3.3.5.2. rodar emulador no 19002.
 - [ ] 3.4. Diferenças para o ReactJS
 - [ ] 3.4.1. Elementos HTML
 - [ ] 3.4.2. Semântica
