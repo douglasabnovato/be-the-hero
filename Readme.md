@@ -176,7 +176,7 @@
 - [x] 3.4.3.3. Herança de estilos
 - [x] 3.4.3.4. Estilização própria
 - [x] 3.5. Estrutura de pastas
-- [ ] 3.6. Ícone e Splash screen
+- [x] 3.6. Ícone e Splash screen
 - [ ] 3.7. configurando navegação
 - [ ] 3.8. página de casos
 - [ ] 3.9. detalhe do caso
