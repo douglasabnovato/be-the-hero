@@ -168,14 +168,14 @@
 - [x] 3.3.4. Executar o projeto depois da criação
 - [x] 3.3.4.1. Abrir studio android, rodar a aplicação, rodar o emulador no expo 
 - [x] 3.4. Diferenças para o ReactJS
-- [ ] 3.4.1. Elementos HTML
-- [ ] 3.4.2. Semântica
-- [ ] 3.4.3. Estilização
-- [ ] 3.4.3.1. Flexbox
-- [ ] 3.4.3.2. Propriedades
-- [ ] 3.4.3.3. Herança de estilos
-- [ ] 3.4.3.4. Estilização própria
-- [ ] 3.5. Estrutura de pastas
+- [x] 3.4.1. Elementos HTML
+- [x] 3.4.2. Semântica
+- [x] 3.4.3. Estilização
+- [x] 3.4.3.1. Flexbox
+- [x] 3.4.3.2. Propriedades
+- [x] 3.4.3.3. Herança de estilos
+- [x] 3.4.3.4. Estilização própria
+- [x] 3.5. Estrutura de pastas
 - [ ] 3.6. Ícone e Splash screen
 - [ ] 3.7. configurando navegação
 - [ ] 3.8. página de casos
