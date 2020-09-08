@@ -164,8 +164,10 @@
 - [x] 3.3.2.2.1. Rodar `expo start` na aplicação
 - [x] 3.3.2.2.2. Abrir o emulador do studio android
 - [x] 3.3.2.2.3. Rodar emulador no Expo/19002
-- [ ] 3.3.3. Expo Snack
-- [ ] 3.4. Diferenças para o ReactJS
+- [x] 3.3.3. Expo Snack
+- [x] 3.3.4. Executar o projeto depois da criação
+- [x] 3.3.4.1. Abrir studio android, rodar a aplicação, rodar o emulador no expo 
+- [x] 3.4. Diferenças para o ReactJS
 - [ ] 3.4.1. Elementos HTML
 - [ ] 3.4.2. Semântica
 - [ ] 3.4.3. Estilização
