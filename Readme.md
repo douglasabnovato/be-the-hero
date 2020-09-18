@@ -185,6 +185,7 @@
 - [x] 3.7.4.1. Stack Navigation: `npm install @react-navigation/stack`
 - [x] 3.7.5. Paginação: Incidents e Detail 
 - [x] 3.7.6. Arquivo `routes.js`
+- [x] 3.7.7. Warning: `npm install react-navigation-stack @react-native-community/masked-view react-native-safe-area-context`
 - [ ] 3.8. página de casos
 - [ ] 3.9. detalhe do caso
 - [ ] 3.10. abrindo whatsapp e e-mail
