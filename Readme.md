@@ -179,11 +179,12 @@
 - [x] 3.6. Ícone e Splash screen
 - [x] 3.7. configurando navegação
 - [x] 3.7.1. criação de pastas
-- [x] 3.7.2. navegação no expo: npm install @react-navigation/native
-- [x] 3.7.3. pacotes: expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+- [x] 3.7.2. navegação no expo: `npm install @react-navigation/native`
+- [x] 3.7.3. pacotes: `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
 - [x] 3.7.4. Tipos de navegação
-- [x] 3.7.4.1. Stack Navigation: npm install @react-navigation/stack
+- [x] 3.7.4.1. Stack Navigation: `npm install @react-navigation/stack`
 - [x] 3.7.5. Paginação: Incidents e Detail 
+- [x] 3.7.6. Arquivo `routes.js`
 - [ ] 3.8. página de casos
 - [ ] 3.9. detalhe do caso
 - [ ] 3.10. abrindo whatsapp e e-mail
