@@ -194,4 +194,4 @@
 - [ ] 3.11. conexão com api
 - [ ] 3.12. enviar projeto para o Github
 
-#### UP 
+#### UP [to do]
