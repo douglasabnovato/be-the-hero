@@ -188,6 +188,7 @@
 - [x] 3.7.7. Warning: `npm install react-navigation-stack @react-native-community/masked-view react-native-safe-area-context`
 - [x] 3.8. página de casos
 - [x] 3.8.1. `expo install expo-constants`
+- [x] 3.8.2. incidents styles
 - [x] 3.9. detalhe do caso
 - [x] 3.9.1. Warning: `Attempted import error: 'createStackNavigation' is not exported from '@react-navigation/stack'.`
 - [ ] 3.10. abrindo whatsapp e e-mail
