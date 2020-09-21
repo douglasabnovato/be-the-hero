@@ -195,3 +195,8 @@
 - [ ] 3.12. enviar projeto para o Github
 
 #### UP [to do]
+
+- [ ] 4.1. Funcionalidades Avançadas.
+
+Por [Douglas A B Novato](https://linktr.ee/douglasabnovato) <br/>
+:. De [Diego Fernandes - Rocketseat - Semana Omnistack 11.0](https://rocketseat.com.br/)
