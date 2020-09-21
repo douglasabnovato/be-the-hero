@@ -147,7 +147,7 @@
 - [x] 2.12.2. Retornar a rota
 - [x] 2.13. Enviar projeto ao Github
 
-#### Mobile
+#### Mobile [doing]
 
 - [ ] 3. Mobile - React Native
 - [x] 3.1.1. Instalando Expo: `npm install -g expo-cli`
@@ -193,3 +193,5 @@
 - [ ] 3.10. abrindo whatsapp e e-mail
 - [ ] 3.11. conexão com api
 - [ ] 3.12. enviar projeto para o Github
+
+#### UP 
