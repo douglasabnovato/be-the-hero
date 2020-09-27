@@ -150,16 +150,16 @@
 #### Mobile [DOING]
 
 - [ ] 3. Mobile - React Native
-- [x] 3.1.1. Instalando Expo: `npm install -g expo-cli`
-- [x] 3.1.2. Expo: `expo -h`
+- [x] 3.1.1. Instalando Expo de forma Global (-g): `npm install -g expo-cli`
+- [x] 3.1.2. Executar o Expo: `expo -h`
 - [x] 3.2. Criando projeto React Native
-- [x] 3.2.1. `expo init mobile`
+- [x] 3.2.1. Criar nosso projeto mobile: `expo init mobile`
 - [x] 3.2.2. template: `blank` 
-- [x] 3.2.3. cd mobile ; `yarn start` ou `expo start`
+- [x] 3.2.3. cd mobile ; rodar o projeto com `expo start`
 - [x] 3.2.4. `http://localhost:19002/`
 - [x] 3.3. Executando o projeto 
 - [x] 3.3.1. No celular
-- [x] 3.3.2. [Emuladores](https://www.facebook.com/rocketseat/videos/2988252154733623): usarei o para Android no Windows
+- [x] 3.3.2. [Emuladores](https://www.facebook.com/rocketseat/videos/2988252154733623): Usamos o emulador Android Studio no Windows
 - [x] 3.3.2.1. Expo cli: `yarn global add expo-cli` 
 - [x] 3.3.2.2.1. Rodar `expo start` na aplicação
 - [x] 3.3.2.2.2. Abrir o emulador do studio android
