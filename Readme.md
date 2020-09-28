@@ -191,7 +191,7 @@
 - [x] 3.8.2. incidents styles
 - [x] 3.9. detalhe do caso
 - [x] 3.9.1. Warning: `Attempted import error: 'createStackNavigation' is not exported from '@react-navigation/stack'.`
-- [x] 3.9.2. refatorando o projeto react native até esse ponto.
+- [x] 3.9.2. refatorar detalhes do código
 - [ ] 3.10. abrindo whatsapp e e-mail
 - [ ] 3.11. conexão com api
 - [ ] 3.12. enviar projeto para o Github
