@@ -199,6 +199,8 @@
 - [x] 3.8.10. useNavigation realiza navegação com efeito visual deslizando
 - [x] 3.9. detalhe do caso
 - [ ] 3.9.1. construir estrutura da tela
+- [x] 3.9.1.1. header
+- [ ] 3.9.1.2. dados do incidente
 - [ ] 3.9.2. estilizar tela
 - [ ] 3.9.3. conectar elementos da tela com o backend 
 - [ ] 3.10. abrindo whatsapp e e-mail
