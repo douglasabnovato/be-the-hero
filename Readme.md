@@ -193,9 +193,14 @@
 - [x] 3.8.4. estilizando os casos  
 - [x] 3.8.5. listagem em tela dos casos com scroll com FlatList
 - [x] 3.8.6. retirar a barra vertical do scroll com showVerticalScrollIndicator
+- [x] 3.8.7. Warning: `Attempted import error: 'createStackNavigation' is not exported from '@react-navigation/stack'.`
+- [x] 3.8.8. refatorar detalhes do código
+- [x] 3.8.9. link para "Ver mais detalhes" do caso com useNavigation
+- [x] 3.8.10. useNavigation realiza navegação com efeito visual deslizando
 - [x] 3.9. detalhe do caso
-- [x] 3.9.1. Warning: `Attempted import error: 'createStackNavigation' is not exported from '@react-navigation/stack'.`
-- [x] 3.9.2. refatorar detalhes do código
+- [ ] 3.9.1. construir estrutura da tela
+- [ ] 3.9.2. estilizar tela
+- [ ] 3.9.3. conectar elementos da tela com o backend 
 - [ ] 3.10. abrindo whatsapp e e-mail
 - [ ] 3.11. conexão com api
 - [ ] 3.12. enviar projeto para o Github
