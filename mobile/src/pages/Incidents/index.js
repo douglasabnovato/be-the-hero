@@ -17,8 +17,10 @@ export default function Incidents(){
             <View style={styles.title}>Bem-vindo !</View>
             <View style={styles.description}>Escolha um dos casos abaixo e salve o dia.</View>
             <FlatList 
-                data={[1,2,3]}
+                data={[1,2,3,4,5]}
                 style={ styles.incidentList } 
+                keyExtractor={ incident => String(incident) }
+                showsVerticalScrollIndicator = { false }
                 renderItem={ () => (
                     <View style={ styles.incident }>
                         <Text style={ styles.incidentProperty }>ONG:</Text>
