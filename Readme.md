@@ -205,7 +205,10 @@
 - [x] 3.9.2.1. link de voltar para página anterior
 - [ ] 3.9.3. conectar elementos da tela com o backend 
 - [ ] 3.10. abrindo whatsapp e e-mail
-- [ ] 3.10.1. essa funcionalidade vai funcionar somente no smartphone
+- [x] 3.10.1. essas duas funcionalidades irão funcionar somente no smartphone
+- [x] 3.10.2. function sendMail
+- [ ] 3.10.2.1. pacote do expo: `expo install expo-mail-composer`
+- [ ] 3.10.3. function sendWhatsapp
 - [ ] 3.11. conexão com api
 - [ ] 3.12. enviar projeto para o Github
 
