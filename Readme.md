@@ -202,8 +202,10 @@
 - [x] 3.9.1.1. header
 - [x] 3.9.1.2. dados do incidente
 - [ ] 3.9.2. estilizar tela
+- [x] 3.9.2.1. link de voltar para página anterior
 - [ ] 3.9.3. conectar elementos da tela com o backend 
 - [ ] 3.10. abrindo whatsapp e e-mail
+- [ ] 3.10.1. essa funcionalidade vai funcionar somente no smartphone
 - [ ] 3.11. conexão com api
 - [ ] 3.12. enviar projeto para o Github
 
