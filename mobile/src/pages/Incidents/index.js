@@ -7,6 +7,7 @@ import styles from './styles';
 export default function Incidents(){
     return (
         <View style={styles.container}>
+
             <View style={styles.header}>
                 <Image source={logoImg}/>
                 <Text style={styles.headerText}>
@@ -15,6 +16,7 @@ export default function Incidents(){
             </View>
             <View style={styles.title}>Bem-vindo !</View>
             <View style={styles.description}>Escolha um dos casos abaixo e salve o dia.</View>
+
             <View style={ styles.incidentList }>
                 <View style={ styles.incident }>
                     <Text style={ styles.incidentProperty }>ONG:</Text>
@@ -32,6 +34,7 @@ export default function Incidents(){
                     </TouchableOpacity>
                 </View>
             </View>
+            
         </View>
     );
 }

@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 
 export default StyleSheet.create({
+
     container:{
         flex: 1,
         paddingHorizontal: 24,
@@ -35,5 +36,22 @@ export default StyleSheet.create({
         fontSize: 16,
         lineHeight: 24,
         color: '#737380',
+    },
+
+    incidentList: {
+        marginTop: 32,
+    },  
+
+    incident: {
+        padding: 24,
+        borderRadius: 8,
+        backgroundColor: '#FFF',
+        marginBottom: 16,
+    },  
+
+    incidentProperty: {
+        fontSize: 14,
+        color: '41414d',
+        fontWeight:'bold'
     },
 });
