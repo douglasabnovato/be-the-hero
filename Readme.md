@@ -189,9 +189,8 @@
 - [x] 3.8. página de casos
 - [x] 3.8.1. `expo install expo-constants`
 - [x] 3.8.2. incidents styles
-- [x] 3.8.3. listagem: casos em tela
-- [x] 3.8.4. estilizando os casos
-- [x] 3.8.5. criando casos estaticamente
+- [x] 3.8.3. listagem em tela dos casos, estaticamente
+- [x] 3.8.4. estilizando os casos  
 - [x] 3.9. detalhe do caso
 - [x] 3.9.1. Warning: `Attempted import error: 'createStackNavigation' is not exported from '@react-navigation/stack'.`
 - [x] 3.9.2. refatorar detalhes do código
