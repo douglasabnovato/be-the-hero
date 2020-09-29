@@ -201,14 +201,15 @@
 - [x] 3.9.1. construir estrutura da tela
 - [x] 3.9.1.1. header
 - [x] 3.9.1.2. dados do incidente
-- [ ] 3.9.2. estilizar tela
+- [x] 3.9.2. estilizar tela
 - [x] 3.9.2.1. link de voltar para página anterior
 - [ ] 3.9.3. conectar elementos da tela com o backend 
-- [ ] 3.10. abrindo whatsapp e e-mail
+- [x] 3.10. abrindo whatsapp e e-mail
 - [x] 3.10.1. essas duas funcionalidades irão funcionar somente no smartphone
 - [x] 3.10.2. function sendMail
-- [ ] 3.10.2.1. pacote do expo: `expo install expo-mail-composer`
-- [ ] 3.10.3. function sendWhatsapp
+- [x] 3.10.2.1. pacote do expo: `expo install expo-mail-composer`
+- [x] 3.10.3. function sendWhatsapp
+- [x] 3.10.3.1. Deep linking para acessar o app que desejo
 - [ ] 3.11. conexão com api
 - [ ] 3.12. enviar projeto para o Github
 
