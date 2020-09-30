@@ -216,7 +216,8 @@
 - [x] 3.11.3.1. ou digitar no terminal `ipconfig`, conferir em `endereço ipv4`
 - [x] 3.11.4. baseURL `http://192.168.25.52:3333`, sendo que 3333 é a porta que usamos no backend
 - [x] 3.11.5. carregar lista de incidentes buscando da api 
-- [ ] 3.11.6. mostrar o preço como tipo valor de moeda
+- [x] 3.11.6. mostrar o preço como tipo valor de moeda
+- [x] 3.11.6.1. pacote `npm install intl` 
 - [ ] 3.11.7. em detalhes, mostrar a informações correspondente
 - [ ] 3.12. enviar projeto para o Github
 
