@@ -218,7 +218,8 @@
 - [x] 3.11.5. carregar lista de incidentes buscando da api 
 - [x] 3.11.6. mostrar o preço como tipo valor de moeda
 - [x] 3.11.6.1. pacote `npm install intl` 
-- [ ] 3.11.7. em detalhes, mostrar a informações correspondente
+- [x] 3.11.7. em detalhes, mostrar a informações correspondentes
+- [ ] 3.11.8. total de casos dinamicamente
 - [ ] 3.12. enviar projeto para o Github
 
 #### UP [to do]
