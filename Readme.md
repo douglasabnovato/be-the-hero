@@ -2,7 +2,7 @@
 
 ### Be The Hero
 
-#### Back End [DONE]
+#### Back End 
 
 - [x] 1. Back End - NodeJS 
 - [x] 1.1. Node.js e Express
@@ -88,7 +88,7 @@
 - [x] 1.20. Cors: npm install cors
 - [x] 1.21. Subindo aplicação `Be The Hero` para o github 
 
-#### Front End [DONE]
+#### Front End 
 
 - [x] 2. Front End - ReactJS 
 - [x] 2.1.1. De um repositório raiz (omnistack-11), `npx create-react-app frontend`
@@ -147,7 +147,7 @@
 - [x] 2.12.2. Retornar a rota
 - [x] 2.13. Enviar projeto ao Github
 
-#### Mobile [DOING]
+#### Mobile 
 
 - [x] 3. Mobile - React Native
 - [x] 3.1.1. Instalando Expo de forma Global (-g): `npm install -g expo-cli`
@@ -224,7 +224,7 @@
 - [x] 3.12. paginação/scroll infinita
 - [x] 3.13. enviar projeto para o Github pelo VSCode
 
-#### Funcionalidades Avançadas [doing]
+#### Funcionalidades Avançadas 
 
 - [ ] 4. Funcionalidades Avançadas 
 - [ ] 4.1. Adicionar validação de dados
