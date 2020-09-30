@@ -203,7 +203,6 @@
 - [x] 3.9.1.2. dados do incidente
 - [x] 3.9.2. estilizar tela
 - [x] 3.9.2.1. link de voltar para página anterior
-- [ ] 3.9.3. conectar elementos da tela com o backend 
 - [x] 3.10. abrindo whatsapp e e-mail
 - [x] 3.10.1. essas duas funcionalidades irão funcionar somente no smartphone
 - [x] 3.10.2. function sendMail
@@ -211,6 +210,14 @@
 - [x] 3.10.3. function sendWhatsapp
 - [x] 3.10.3.1. Deep linking para acessar o app que desejo
 - [ ] 3.11. conexão com api
+- [x] 3.11.1. instalar o axios: `npm install axios`, o cliente http
+- [x] 3.11.2. criar arquivo `src/services/api.js`
+- [x] 3.11.3. atenção: usar ip que está sendo exibido no expo
+- [x] 3.11.3.1. ou digitar no terminal `ipconfig`, conferir em `endereço ipv4`
+- [x] 3.11.4. baseURL `http://192.168.25.52:3333`, sendo que 3333 é a porta que usamos no backend
+- [x] 3.11.5. carregar lista de incidentes buscando da api 
+- [ ] 3.11.6. mostrar o preço como tipo valor de moeda
+- [ ] 3.11.7. em detalhes, mostrar a informações correspondente
 - [ ] 3.12. enviar projeto para o Github
 
 #### UP [to do]
