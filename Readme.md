@@ -209,7 +209,7 @@
 - [x] 3.10.2.1. pacote do expo: `expo install expo-mail-composer`
 - [x] 3.10.3. function sendWhatsapp
 - [x] 3.10.3.1. Deep linking para acessar o app que desejo
-- [ ] 3.11. conexão com api
+- [x] 3.11. conexão com api
 - [x] 3.11.1. instalar o axios: `npm install axios`, o cliente http
 - [x] 3.11.2. criar arquivo `src/services/api.js`
 - [x] 3.11.3. atenção: usar ip que está sendo exibido no expo
@@ -221,7 +221,8 @@
 - [x] 3.11.7. em detalhes, mostrar a informações correspondentes
 - [x] 3.11.8. total de casos dinamicamente
 - [x] 3.11.9. as informações do incidente no envio de whatsapp e e-mail
-- [ ] 3.12. enviar projeto para o Github
+- [x] 3.12. paginação/scroll infinita
+- [ ] 3.13. enviar projeto para o Github
 
 #### UP [to do]
 
