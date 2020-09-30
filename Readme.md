@@ -220,6 +220,7 @@
 - [x] 3.11.6.1. pacote `npm install intl` 
 - [x] 3.11.7. em detalhes, mostrar a informações correspondentes
 - [x] 3.11.8. total de casos dinamicamente
+- [ ] 3.11.9. as informações que irão no envio de whatsapp e e-mail
 - [ ] 3.12. enviar projeto para o Github
 
 #### UP [to do]

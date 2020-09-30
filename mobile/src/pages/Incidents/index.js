@@ -9,7 +9,7 @@ import styles from './styles';
 export default function Incidents(){
     const [ incidents, setIncidents ] = useState([]);
     const [ total, setTotal ] = useState(0);
-    const navigation = useNavigation();
+    const navigation = useNavigation();    
     function navigationToDetail(incident){
         navigation.navigate('Detail', { incident });
     }
@@ -49,7 +49,7 @@ export default function Incidents(){
                                 style: 'currency', 
                                 currency: 'BRL' 
                             }).format(incident.value)}
-                            </Text>
+                        </Text>
                         <TouchableOpacity 
                             style={ styles.detailsButton } 
                             onPress={ () => navigationToDetail(incident) }
