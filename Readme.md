@@ -149,7 +149,7 @@
 
 #### Mobile [DOING]
 
-- [ ] 3. Mobile - React Native
+- [x] 3. Mobile - React Native
 - [x] 3.1.1. Instalando Expo de forma Global (-g): `npm install -g expo-cli`
 - [x] 3.1.2. Executar o Expo: `expo -h`
 - [x] 3.2. Criando projeto React Native
@@ -224,9 +224,28 @@
 - [x] 3.12. paginação/scroll infinita
 - [x] 3.13. enviar projeto para o Github pelo VSCode
 
-#### UP [to do]
+#### Funcionalidades Avançadas [doing]
 
-- [ ] 4.1. Funcionalidades Avançadas.
+- [ ] 4. Funcionalidades Avançadas 
+- [ ] 4.1. Adicionar validação de dados
+- [ ] 4.2. Adicionar testes
+- [ ] 4.2.1. Porque fazer testes ?
+- [ ] 4.2.2. configurando Jest
+- [ ] 4.2.3. Tipos de testes
+- [ ] 4.2.4. configurando banco de testes
+- [ ] 4.2.5. instalando supertest
+- [ ] 4.2.6. testando rota de autenticação
+- [ ] 4.2.7. 
+- [ ] 4.3. Deploy
+- [ ] 4.3.1. alternativas
+- [ ] 4.3.2. qual escolher ?
+- [ ] 4.4. Estudos daqui para frente
+- [ ] 4.4.1. padrões de código: eslint, prettier
+- [ ] 4.4.2. autenticação jwt
+- [ ] 4.4.3. styled components
+- [ ] 4.5. Dicas para aproveitar melhor
+- [ ] 4.5.1. github
+- [ ] 4.5.2. linkedin
 
 Por [Douglas A B Novato - @douglasabnovato](https://linktr.ee/douglasabnovato) <br/>
 :. De [Diego Fernandes - Rocketseat - Semana Omnistack 11.0](https://rocketseat.com.br/)
