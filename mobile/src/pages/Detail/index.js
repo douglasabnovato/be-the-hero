@@ -10,14 +10,16 @@ export default function Detail(){
     const navigation = useNavigation();
     const route = useRoute();
     const incident = route.params.incident;
-    const message = 'Olá APAD, estou entrando em contato pois gostaria de ajudar no caso "Cadelinha atropelada" com o valor de R$120,00.';
+    const message = `
+                        Olá ${incident.name}, estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" com o valor de ${Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL' }).format(incident.value)}.
+                    `;
     function navigateBack(){
         navigation.goBack();
     }
     function sendMail(){
         MailComposer.composeAsync({
-            subject: 'Herói do caso: Cadelinha atropelada',
-            recipients: ['douglasabnovato@gmail.com'],
+            subject: `Herói do caso: ${incident.title}`,
+            recipients: [incident.email],
             body: message,
         })
     }
