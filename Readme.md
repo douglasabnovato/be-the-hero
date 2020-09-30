@@ -222,7 +222,7 @@
 - [x] 3.11.8. total de casos dinamicamente
 - [x] 3.11.9. as informações do incidente no envio de whatsapp e e-mail
 - [x] 3.12. paginação/scroll infinita
-- [ ] 3.13. enviar projeto para o Github
+- [x] 3.13. enviar projeto para o Github pelo VSCode
 
 #### UP [to do]
 
