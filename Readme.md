@@ -233,6 +233,11 @@
 - [x] 4.1.3.2. a biblioteca celebrate para fazer validações
 - [x] 4.1.3.3. celebrate integra o joi com o express que estamos usando no nodejs
 - [x] 4.1.4. ongController na rota de create
+- [x] 4.1.4.1. configurar a validação no arquivo rotas
+- [x] 4.1.4.2. executar o servidor `npm start`
+- [x] 4.1.4.3. tratar o erro da validação do create - BODY
+- [x] 4.1.4.4. tratar o erro da validação do edit - HEADERS
+- [x] 4.1.4.5. tratar o erro da validação do delete - PARAMS
 - [ ] 4.2. Adicionar testes
 - [ ] 4.2.1. Porque fazer testes ?
 - [ ] 4.2.2. configurando Jest
