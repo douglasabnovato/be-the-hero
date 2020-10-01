@@ -263,6 +263,8 @@
 - [x] 4.2.5. instalando supertest
 - [x] 4.2.5.1. requisição para testes
 - [x] 4.2.5.2. npm install supertest
+- [x] 4.2.5.3. configurar em ong.spec.js
+- [ ] 4.2.5.4. executar as migrations dentro do bd de teste
 - [ ] 4.2.6. testando rota de autenticação 
 - [ ] 4.3. Deploy
 - [ ] 4.3.1. alternativas
