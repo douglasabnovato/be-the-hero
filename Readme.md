@@ -263,19 +263,25 @@
 - [x] 4.2.5. instalando supertest
 - [x] 4.2.5.1. requisição para testes
 - [x] 4.2.5.2. npm install supertest
-- [x] 4.2.5.3. configurar em ong.spec.js
+- [x] 4.2.5.3. configurar em ong.spec.js 00:47:52 
 - [ ] 4.2.5.4. executar as migrations dentro do bd de teste
 - [ ] 4.2.6. testando rota de autenticação 
-- [ ] 4.3. Deploy
-- [ ] 4.3.1. alternativas
-- [ ] 4.3.2. qual escolher ?
-- [ ] 4.4. Estudos daqui para frente
-- [ ] 4.4.1. padrões de código: eslint, prettier
-- [ ] 4.4.2. autenticação jwt
-- [ ] 4.4.3. styled components
-- [ ] 4.5. Dicas para aproveitar melhor
-- [ ] 4.5.1. github
-- [ ] 4.5.2. linkedin
+- [x] 4.3. Deploy
+- [x] 4.3.1. NodeJS: Heroku - aplicações de modelo
+- [x] 4.3.2. NodeJS: DigitalOcean - aplicação comercial
+- [x] 4.3.3. ReactJS: netlify - aplicação de modelo
+- [x] 4.3.4. React Native: criar o aplicativo e publicar nas lojas
+- [x] 4.4. Estudos daqui para frente ( Rocketseat - Youtube )
+- [x] 4.4.1. padrões de código: eslint, prettier
+- [x] 4.4.2. autenticação jwt
+- [x] 4.4.3. ferramenta de estilização - styled components
+- [x] 4.5. Dicas para aproveitar melhor
+- [x] 4.5.1. github - subir todos os projetos de estudo ou projetos pessoais
+- [x] 4.5.2. linkedin - o que desenvolver, o que aprendeu, gravar vídeo, gravar gif, quais tecnologias
+- [x] 4.6. Aprender a fazer perguntas sobre o desenvolvimento da aplicação
+- [x] 4.7. Ter desafios para serem marcações do nível do domínio do conhecimento
+- [x] 4.8. Prática e Comunidade devem andar juntos para acelerar o aprendizado 
+- [x] 4.9. Ter um cronograma de estudos com recompensas a cada nível superado
 
 Por [Douglas A B Novato - @douglasabnovato](https://linktr.ee/douglasabnovato) <br/>
 :. De [Diego Fernandes - Rocketseat - Semana Omnistack 11.0](https://rocketseat.com.br/)
