@@ -253,10 +253,14 @@
 - [x] 4.2.4.1. unit: `generateUniqueId.spec.js`
 - [x] 4.2.4.1.1. executar os testes `npm test`
 - [x] 4.2.4.1.2. module.exports no lugar de export default 
-- [ ] 4.2.4.2. integration
-- [ ] 4.2.5. configurando banco de testes
-- [ ] 4.2.6. instalando supertest
-- [ ] 4.2.7. testando rota de autenticação 
+- [x] 4.2.4.2. integration: 
+- [x] 4.2.4.2.1. configurando banco de testes 
+- [x] 4.2.4.2.2. db sqlite
+- [x] 4.2.4.2.3. npm install cross-env
+- [x] 4.2.4.2.4. variável ambiente do nodejs
+- [ ] 4.2.4.2.5. ong.spec.js
+- [ ] 4.2.5. instalando supertest
+- [ ] 4.2.6. testando rota de autenticação 
 - [ ] 4.3. Deploy
 - [ ] 4.3.1. alternativas
 - [ ] 4.3.2. qual escolher ?
