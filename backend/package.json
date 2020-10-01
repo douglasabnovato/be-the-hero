@@ -14,10 +14,12 @@
     "celebrate": "^13.0.3",
     "cors": "^2.8.5",
     "cross-env": "^7.0.2",
-    "express": "^4.17.1",
-    "jest": "^26.4.2",
+    "express": "^4.17.1",    
     "knex": "^0.21.5",
-    "sqlite3": "^5.0.0",
-    "supertest": "^5.0.0"
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "supertest": "^5.0.0",
+    "jest": "^26.4.2"
   }
 }
