@@ -226,7 +226,7 @@
 
 #### Funcionalidades Avançadas 
 
-- [ ] 4. Funcionalidades Avançadas 
+- [x] 4. Funcionalidades Avançadas 
 - [x] 4.1. Adicionar validação de dados
 - [x] 4.1.2. certificar que toda informação entre no banco de dados 100% correta
 - [x] 4.1.3.1. no backend, `npm install celebrate`
@@ -249,7 +249,9 @@
 - [x] 4.2.3.1. `npm install jest`
 - [x] 4.2.3.2. backend: `npx jest --init`
 - [x] 4.2.3.2.1. configurações
-- [ ] 4.2.4. Tipos de testes
+- [x] 4.2.4. Tipos de testes
+- [ ] 4.2.4.1. unit
+- [ ] 4.2.4.2. integration
 - [ ] 4.2.5. configurando banco de testes
 - [ ] 4.2.6. instalando supertest
 - [ ] 4.2.7. testando rota de autenticação 
