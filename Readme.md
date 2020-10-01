@@ -250,7 +250,9 @@
 - [x] 4.2.3.2. backend: `npx jest --init`
 - [x] 4.2.3.2.1. configurações
 - [x] 4.2.4. Tipos de testes
-- [ ] 4.2.4.1. unit
+- [x] 4.2.4.1. unit: `generateUniqueId.spec.js`
+- [x] 4.2.4.1.1. executar os testes `npm test`
+- [x] 4.2.4.1.2. module.exports no lugar de export default 
 - [ ] 4.2.4.2. integration
 - [ ] 4.2.5. configurando banco de testes
 - [ ] 4.2.6. instalando supertest

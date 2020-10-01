@@ -1,10 +1,8 @@
-/**
- * Teste unitário teste algo muito específico
- * criar id único com teste unitário
- */
-
 const crypto = require('crypto');
-
-export default function generateUniqueid(){
+/**
+ * Teste unitário é para uma funcionalidade muito específica
+ * criar id único 
+ */
+module.exports = function generateUniqueid(){
     return crypto.randomBytes(4).toString('HEX');
 };
