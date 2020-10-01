@@ -227,7 +227,12 @@
 #### Funcionalidades Avançadas 
 
 - [ ] 4. Funcionalidades Avançadas 
-- [ ] 4.1. Adicionar validação de dados
+- [x] 4.1. Adicionar validação de dados
+- [x] 4.1.2. certificar que toda informação entre no banco de dados 100% correta
+- [x] 4.1.3.1. no backend, `npm install celebrate`
+- [x] 4.1.3.2. a biblioteca celebrate para fazer validações
+- [x] 4.1.3.3. celebrate integra o joi com o express que estamos usando no nodejs
+- [x] 4.1.4. ongController na rota de create
 - [ ] 4.2. Adicionar testes
 - [ ] 4.2.1. Porque fazer testes ?
 - [ ] 4.2.2. configurando Jest
