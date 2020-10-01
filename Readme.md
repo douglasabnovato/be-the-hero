@@ -245,7 +245,10 @@
 - [x] 4.2.2. TDD - Test-Driven Development (desenvolvimento dirigido a testes)
 - [x] 4.2.2.1. desenvolve o código e depois implementa os testes
 - [x] 4.2.2.2. criar os testes e depois desenvolve o código
-- [ ] 4.2.3. configurando Jest
+- [x] 4.2.3. configurando Jest
+- [x] 4.2.3.1. `npm install jest`
+- [x] 4.2.3.2. backend: `npx jest --init`
+- [x] 4.2.3.2.1. configurações
 - [ ] 4.2.4. Tipos de testes
 - [ ] 4.2.5. configurando banco de testes
 - [ ] 4.2.6. instalando supertest
