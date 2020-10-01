@@ -258,8 +258,11 @@
 - [x] 4.2.4.2.2. db sqlite
 - [x] 4.2.4.2.3. npm install cross-env
 - [x] 4.2.4.2.4. variável ambiente do nodejs
-- [ ] 4.2.4.2.5. ong.spec.js
-- [ ] 4.2.5. instalando supertest
+- [x] 4.2.4.2.5. ong.spec.js
+- [x] 4.2.4.2.6. testar nossa aplicação como um todo
+- [x] 4.2.5. instalando supertest
+- [x] 4.2.5.1. requisição para testes
+- [x] 4.2.5.2. npm install supertest
 - [ ] 4.2.6. testando rota de autenticação 
 - [ ] 4.3. Deploy
 - [ ] 4.3.1. alternativas
