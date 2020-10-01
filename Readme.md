@@ -238,6 +238,7 @@
 - [x] 4.1.4.3. tratar o erro da validação do create - BODY
 - [x] 4.1.4.4. tratar o erro da validação do edit - HEADERS
 - [x] 4.1.4.5. tratar o erro da validação do delete - PARAMS
+- [x] 4.1.4.6. tratar o erro da validação da paginação - QUERY
 - [ ] 4.2. Adicionar testes
 - [ ] 4.2.1. Porque fazer testes ?
 - [ ] 4.2.2. configurando Jest
