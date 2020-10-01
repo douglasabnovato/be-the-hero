@@ -239,14 +239,17 @@
 - [x] 4.1.4.4. tratar o erro da validação do edit - HEADERS
 - [x] 4.1.4.5. tratar o erro da validação do delete - PARAMS
 - [x] 4.1.4.6. tratar o erro da validação da paginação - QUERY
-- [ ] 4.2. Adicionar testes
-- [ ] 4.2.1. Porque fazer testes ?
-- [ ] 4.2.2. configurando Jest
-- [ ] 4.2.3. Tipos de testes
-- [ ] 4.2.4. configurando banco de testes
-- [ ] 4.2.5. instalando supertest
-- [ ] 4.2.6. testando rota de autenticação
-- [ ] 4.2.7. 
+- [x] 4.2. Adicionar testes
+- [x] 4.2.1. Porque fazer testes ?
+- [x] 4.2.1.1. garantir pleno funcionamento de toda aplicação a cada feature implementada
+- [x] 4.2.2. TDD - Test-Driven Development (desenvolvimento dirigido a testes)
+- [x] 4.2.2.1. desenvolve o código e depois implementa os testes
+- [x] 4.2.2.2. criar os testes e depois desenvolve o código
+- [ ] 4.2.3. configurando Jest
+- [ ] 4.2.4. Tipos de testes
+- [ ] 4.2.5. configurando banco de testes
+- [ ] 4.2.6. instalando supertest
+- [ ] 4.2.7. testando rota de autenticação 
 - [ ] 4.3. Deploy
 - [ ] 4.3.1. alternativas
 - [ ] 4.3.2. qual escolher ?
