@@ -275,6 +275,11 @@
 - [x] 4.4.1. padrões de código: eslint, prettier
 - [x] 4.4.2. autenticação jwt
 - [x] 4.4.3. ferramenta de estilização - styled components
+
+- Terminado o frontend mobile com React Native e web com ReactJS, e terminado o backend com NodeJS e SQLite, também implementado as funcionalidades avançadas de testes com Jest.
+
+#### Considerações Finais
+
 - [x] 4.5. Dicas para aproveitar melhor
 - [x] 4.5.1. github - subir todos os projetos de estudo ou projetos pessoais
 - [x] 4.5.2. linkedin - o que desenvolver, o que aprendeu, gravar vídeo, gravar gif, quais tecnologias
