@@ -260,12 +260,12 @@
 - [x] 4.2.4.2.4. variável ambiente do nodejs
 - [x] 4.2.4.2.5. ong.spec.js
 - [x] 4.2.4.2.6. testar nossa aplicação como um todo
-- [x] 4.2.5. instalando supertest
-- [x] 4.2.5.1. requisição para testes
-- [x] 4.2.5.2. npm install supertest
-- [x] 4.2.5.3. configurar em ong.spec.js 
-- [ ] 4.2.5.4. executar as migrations dentro do bd de teste
-- [ ] 4.2.6. testando rota de autenticação 
+- [x] 4.2.4.2.7. instalando supertest
+- [x] 4.2.4.2.8. requisição para testes
+- [x] 4.2.4.2.9. npm install supertest
+- [x] 4.2.4.2.10. configurar em ong.spec.js 
+- [x] 4.2.4.2.11. executar as migrations dentro do bd de teste
+- [x] 4.2.4.2.12. testando rota de criação de ong 
 - [x] 4.3. Deploy
 - [x] 4.3.1. NodeJS: Heroku - aplicações de modelo
 - [x] 4.3.2. NodeJS: DigitalOcean - aplicação comercial
