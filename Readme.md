@@ -276,8 +276,6 @@
 - [x] 4.4.2. autenticação jwt
 - [x] 4.4.3. ferramenta de estilização - styled components
 
-- Terminado o frontend mobile com React Native e web com ReactJS, e terminado o backend com NodeJS e SQLite, também implementado as funcionalidades avançadas de testes com Jest.
-
 #### Considerações Finais
 
 - [x] 4.5. Dicas para aproveitar melhor
@@ -287,6 +285,10 @@
 - [x] 4.7. Ter desafios para serem marcações do nível do domínio do conhecimento
 - [x] 4.8. Prática e Comunidade devem andar juntos para acelerar o aprendizado 
 - [x] 4.9. Ter um cronograma de estudos com recompensas a cada nível superado
+- [x] 4.10.1. Terminado o frontend mobile com React Native 
+- [x] 4.10.2. Terminado o frontend web com ReactJS
+- [x] 4.10.3. Terminado o backend com NodeJS e SQLite
+- [x] 4.10.4. Implementado algumas funcionalidades avançadas de testes com Jest.
 
 Por [Douglas A B Novato - @douglasabnovato](https://linktr.ee/douglasabnovato) <br/>
 :. De [Diego Fernandes - Rocketseat - Semana Omnistack 11.0](https://rocketseat.com.br/)
