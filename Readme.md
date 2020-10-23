@@ -2,6 +2,8 @@
 
 ### Be The Hero
 
+![Be The Hero](/frontend/images/be-the-hero.jpg)
+
 #### Back End 
 
 - [x] 1. Back End - NodeJS 
