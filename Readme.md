@@ -146,6 +146,7 @@
 - [x] 2.12.1. Cadastrar novo caso
 - [x] 2.12.2. Retornar a rota
 - [x] 2.13. Enviar projeto ao Github
+- [x] 2.14. warning: não reconheceu `react-scripts`. Executado `npm install react-scripts --save`
 
 #### Mobile 
 
