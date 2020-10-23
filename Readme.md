@@ -6,8 +6,10 @@
 
 #### Tecnologias e Ferramentas
 
-- Front-end: Reactjs
+- Front-end: Reactjs, HTML, CSS, Javascript, Google Fonts, Link
 - Back-end: Nodejs, Express, SQLite, Insomnia. Knex, crypto, Join, Cors,  Migration, Routes, Nodemon
+
+---
 
 #### Back End 
 
@@ -115,7 +117,7 @@
 - [x] 2.3.4. Google Fonts
 - [x] 2.3.5. Estrutura do design da tela
 - [x] 2.3.6. Feather icons
-- [x] 2.3.7. npm install react-icons
+- [x] 2.3.7. `npm install react-icons`
 - [x] 2.3.8. Estilização page logon 
 - [x] 2.4. configuração de rotas
 - [x] 2.4.1.1. `npm install react-router-dom` 
