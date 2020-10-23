@@ -155,7 +155,7 @@
 - [x] 2.12.2. Retornar a rota
 - [x] 2.13. Enviar projeto ao Github
 - [x] 2.14. warning: não reconheceu `react-scripts`. Executado `npm install react-scripts --save`
-- [ ] 2.15. warning: cadastrar ong. Mensagem `erro no cadastro. tente novamente.`
+- [x] 2.15. warning: cadastrar ong. Mensagem `erro no cadastro. tente novamente.` - UF deve ser somente de dois dígitos
 
 #### Mobile 
 

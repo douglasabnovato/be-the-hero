@@ -9,6 +9,7 @@ import logoImg from '../../assets/logo.svg';
 
 export default function Register(){
 
+    //um state para cada um dos inputs
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
@@ -18,7 +19,9 @@ export default function Register(){
     const history = useHistory();
 
     async function handleRegister(e){
-        e.preventDefault();
+
+        e.preventDefault();//não atualiza mais a página com ação do formulário
+
         const data = {
             name, 
             email, 
@@ -26,6 +29,7 @@ export default function Register(){
             city, 
             uf,
         };
+
         try {
             const response = await api.post('ongs', data);
             alert(`Seu ID de acesso: ${response.data.id}`);
