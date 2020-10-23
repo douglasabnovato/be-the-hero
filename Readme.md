@@ -4,7 +4,7 @@
 
 #### Tecnologias e Ferramentas
 
-- Front-end: Reactjs, HTML, CSS, Javascript, Google Fonts, Link
+- Front-end: Reactjs, HTML, CSS, Javascript, Google Fonts, Link, Axios
 - Back-end: Nodejs, Express, SQLite, Insomnia. Knex, crypto, Join, Cors,  Migration, Routes, Nodemon
 
 ---
@@ -136,7 +136,7 @@
 - [x] 2.8. Conectar a aplicação frontend em Reactjs com o backend em Nodejs
 - [x] 2.8.1. frontend | `npm start`
 - [x] 2.8.2. backend | `npm start`
-- [x] 2.8.3. instalar cliente http | `npm install axios`
+- [x] 2.8.3. instalar cliente http - **Axios** | `npm install axios`
 - [x] 2.8.4. configuração do frontend com o backend
 - [x] 2.8.4.1. armazenar cada valor dos inputs do frontend em um state 
 - [x] 2.8.4.2. cadastrar informações no bd
@@ -155,6 +155,7 @@
 - [x] 2.12.2. Retornar a rota
 - [x] 2.13. Enviar projeto ao Github
 - [x] 2.14. warning: não reconheceu `react-scripts`. Executado `npm install react-scripts --save`
+- [ ] 2.15. warning: cadastrar ong. Mensagem `erro no cadastro. tente novamente.`
 
 #### Mobile 
 
