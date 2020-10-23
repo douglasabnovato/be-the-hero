@@ -4,6 +4,11 @@
 
 ![Be The Hero](/frontend/images/be-the-hero.jpg)
 
+#### Tecnologias e Ferramentas
+
+- Front-end: Reactjs
+- Back-end: Nodejs, Express, SQLite, Insomnia. Knex, crypto, Join, Cors,  Migration, Routes, Nodemon
+
 #### Back End 
 
 - [x] 1. Back End - NodeJS 
@@ -43,6 +48,7 @@
 - [x] 1.6.2.5. Deletar casos
 - [x] 1.6.2.6. Listar casos específicos de uma ONG
 - [x] 1.6.2.7. Listar todos os casos
+- [x] 1.6.2.7.1. paginação - `http://localhost:3333/incidents?page=3`
 - [x] 1.6.2.8. Entrar em contato com a ONG (whatsapp e email)
 - [x] 1.7. Configurar as migrations
 - [x] 1.7.1. um controle de versão de db 
@@ -89,19 +95,6 @@
 - [x] 1.19. Join: relacionar dados de duas tabelas
 - [x] 1.20. Cors: `npm install cors`
 - [x] 1.21. Subindo aplicação `Be The Hero` para o github 
-- [x] 1.22. Entidade
-- [x] 1.22.1. ONG
-- [x] 1.22.2. Incident
-- [x] 1.23. Funcionalidades
-- [x] 1.23.1. Login de ONG
-- [x] 1.23.2. Logout de ONG
-- [x] 1.23.3. Cadastro de ONG 
-- [x] 1.23.4. Cadastrar novos casos
-- [x] 1.23.5. Deletar casos
-- [x] 1.23.6. Listar casos específicos de uma ONG
-- [x] 1.23.7. Listar todos os casos
-- [x] 1.23.7.1. paginação - `http://localhost:3333/incidents?page=3`
-- [x] 1.23.8. Entrar em contato com a ONG
 
 #### Front End 
 
