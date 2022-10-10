@@ -4,7 +4,7 @@
 
 ### Projeto
 
-Projeto prático da Omnistack 11 da Rocketseat, um projeto para cadastrar heróis que poderão contribuir acessando o perfil.
+Um projeto para cadastrar heróis que poderão contribuir acessando o perfil.
 
 #### Tecnologias e Ferramentas
 
