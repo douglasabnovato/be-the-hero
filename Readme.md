@@ -2,6 +2,10 @@
 
 ![Be The Hero](/frontend/images/be-the-hero.jpg)
 
+### Projeto
+
+Projeto prático da Omnistack 11 da Rocketseat, um projeto para cadastrar heróis que poderão contribuir acessando o perfil.
+
 #### Tecnologias e Ferramentas
 
 - Front-end: Reactjs, HTML, CSS, Javascript, Google Fonts, Link, Axios
