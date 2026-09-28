@@ -290,6 +290,39 @@ Um projeto para cadastrar heróis que poderão contribuir acessando o perfil.
 - [x] 4.4.2. autenticação jwt
 - [x] 4.4.3. ferramenta de estilização - styled components
 
+#### Versão 2.0 (revisão de qualidade)
+
+- [x] Removida a rota `GET /ongs`, que devolvia o ID de acesso (a "senha") de todas as ONGs
+- [x] ID de acesso com 16 caracteres (antes 8), limite de tentativas e sessão com token
+- [x] Excluir caso inexistente não derruba mais a API; só a ONG dona exclui
+- [x] Validação em português, valores em reais e WhatsApp normalizados
+- [x] PostgreSQL em produção (Neon, gratuito) e SQLite no desenvolvimento, com as mesmas migrações
+- [x] Web em Vite 8 + React 18 (ID exibido na tela, sem `alert()`), acessível e responsivo
+- [x] App em Expo SDK 57 (antes não compilava: erro de sintaxe no estilo e texto fora de `<Text>`)
+- [x] 17 testes automatizados (API em SQLite e PostgreSQL + web)
+
+Detalhes em [docs/ANALISE.md](docs/ANALISE.md), [docs/ARQUITETURA.md](docs/ARQUITETURA.md), [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md) e [docs/DEPLOY.md](docs/DEPLOY.md).
+
+#### Como executar
+
+```bash
+# API (http://localhost:3333) — SQLite local, sem configurar banco
+cd backend && cp .env.example .env && npm install && npm run dev
+npm test
+
+# Web (http://localhost:5173)
+cd frontend && cp .env.example .env && npm install && npm run dev
+
+# App (Expo Go no celular)
+cd mobile && cp .env.example .env && npm install && npx expo start
+```
+
+#### Em produção
+
+- Painel das ONGs: https://be-the-hero-web.onrender.com · API: https://be-the-hero-api.onrender.com/health
+- Hospedagem gratuita: Render (API + site estático no mesmo `render.yaml`) com PostgreSQL no Neon, publicada a cada push na `master`. O app mobile usa a API publicada via `EXPO_PUBLIC_API_URL`.
+- Passo a passo completo (Neon, Render, CI e conferência): [docs/DEPLOY.md](docs/DEPLOY.md).
+
 #### Considerações Finais
 
 - [x] 4.5. Dicas para aproveitar melhor

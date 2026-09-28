@@ -1,10 +1,13 @@
-import 'intl';
-import 'intl/locale-data/jsonp/pt-BR';
-import React from 'react';
-import Routes from './src/routes';
+/* Raiz do app dos heróis: rotas e barra de status (Intl já é nativo no Hermes, o polyfill saiu) */
+import { StatusBar } from "expo-status-bar";
+import Routes from "./src/routes";
 
 export default function App() {
   return (
-    <Routes />
+    <>
+      <StatusBar style="dark" />
+      <Routes />
+    </>
   );
-} 
+}
+/* Fim de App.js */

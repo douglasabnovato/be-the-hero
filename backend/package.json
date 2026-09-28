@@ -1,25 +1,31 @@
 {
-  "name": "omnistack-11",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "be-the-hero-backend",
+  "version": "2.0.0",
+  "description": "API do Be The Hero: ONGs cadastram casos e heróis encontram quem ajudar.",
+  "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/server.js",
-    "test": "cross-env NODE_ENV=test jest"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "knex migrate:latest",
+    "test": "node --test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
   "dependencies": {
-    "celebrate": "^13.0.3",
-    "cors": "^2.8.5",
-    "cross-env": "^7.0.2",
-    "express": "^4.17.1",    
-    "knex": "^0.21.5",
-    "sqlite3": "^5.0.0"
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "knex": "^3.3.0",
+    "pg": "^8.23.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "supertest": "^5.0.0",
-    "jest": "^26.4.2"
+    "supertest": "^7.3.0"
   }
 }

@@ -1,3 +1,4 @@
+/* Estilos da página Logon */
 .logon-container {
     width: 100%;
     max-width: 1120px;
@@ -23,3 +24,11 @@
     margin-bottom: 32px;
 }
 
+.logon-container img.heroes { max-width: 50%; height: auto; }
+@media (max-width: 800px) {
+  .logon-container { height: auto; min-height: 100vh; padding: 32px 24px; }
+  .logon-container section.form { margin-right: 0; max-width: none; }
+  .logon-container section.form form { margin-top: 48px; }
+  .logon-container img.heroes { display: none; }
+}
+/* Fim de Logon/styles.css */

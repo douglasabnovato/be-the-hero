@@ -1,6 +1,11 @@
-const knex = require('knex');
-const configuration = require('../../knexfile');
-const config = process.env.NODE_ENV === 'test' ? configuration.test : configuration.development;
-const connection = knex(config);
+/* Cria a conexão Knex a partir da configuração do ambiente */
+const knex = require("knex");
+const { knexConfig } = require("../../knexfile");
 
-module.exports = connection;
+/* Nova instância (os testes usam uma por suíte, em memória) */
+function createConnection(env = process.env) {
+  return knex(knexConfig(env));
+}
+
+module.exports = { createConnection };
+/* Fim de connection.js */

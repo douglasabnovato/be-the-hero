@@ -1,0 +1,38 @@
+# Blueprint do Render (plano gratuito): API Node + web estático no mesmo Blueprint; banco PostgreSQL no Neon (DATABASE_URL)
+services:
+  - type: web
+    name: be-the-hero-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGINS
+        value: https://be-the-hero-web.onrender.com
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+  - type: web
+    name: be-the-hero-web
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: build
+    autoDeployTrigger: commit
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: VITE_API_URL
+        value: https://be-the-hero-api.onrender.com

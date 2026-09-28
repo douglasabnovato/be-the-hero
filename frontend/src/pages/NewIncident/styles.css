@@ -1,3 +1,4 @@
+/* Estilos da página NewIncident */
 .new-incident-container {
     width: 100%;
     max-width: 1120px;
@@ -31,7 +32,7 @@
 
 .new-incident-container .content section p{
     font-size: 18px;
-    color: #737380;
+    color: #5e5e6b;
     line-height: 32px;
 }
 
@@ -43,4 +44,11 @@
 .new-incident-container .content form input,
 .new-incident-container .content form textarea {
     margin-top: 8px;
-} 
+}
+
+@media (max-width: 800px) {
+  .new-incident-container { height: auto; min-height: 100vh; padding: 24px 16px; }
+  .new-incident-container .content { flex-direction: column; align-items: stretch; padding: 32px 20px; gap: 32px; }
+  .new-incident-container .content section h1 { margin: 32px 0 16px; }
+}
+/* Fim de NewIncident/styles.css */

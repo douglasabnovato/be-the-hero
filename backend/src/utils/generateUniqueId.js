@@ -1,8 +1,8 @@
-const crypto = require('crypto');
-/**
- * Teste unitário é para uma funcionalidade muito específica
- * criar id único 
- */
-module.exports = function generateUniqueid(){
-    return crypto.randomBytes(4).toString('HEX');
+/* Gera o ID de acesso da ONG: 16 caracteres hexadecimais (64 bits), antes eram 8 (32 bits, fácil de adivinhar) */
+const crypto = require("node:crypto");
+
+/* ID aleatório criptograficamente seguro */
+module.exports = function generateUniqueId() {
+  return crypto.randomBytes(8).toString("hex");
 };
+/* Fim de generateUniqueId.js */

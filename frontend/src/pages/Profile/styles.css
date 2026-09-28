@@ -1,3 +1,4 @@
+/* Estilos da página Profile */
 .profile-container {
     width: 100%;
     max-width: 1180px;
@@ -80,7 +81,19 @@
 }
 
 .profile-container ul li p {
-    color: #737380;
+    color: #5e5e6b;
     line-height: 21px;
     font-size: 16px;
 }
+
+.profile-container ul li button { background: transparent; padding: 4px; }
+.profile-container ul li p { overflow-wrap: anywhere; }
+@media (max-width: 800px) {
+  .profile-container { padding: 0 16px; }
+  .profile-container header { flex-wrap: wrap; gap: 12px; }
+  .profile-container header span { margin-left: 0; }
+  .profile-container header a { width: auto; flex: 1; margin-left: 0; }
+  .profile-container h1 { margin-top: 40px; }
+  .profile-container ul { grid-template-columns: 1fr; }
+}
+/* Fim de Profile/styles.css */

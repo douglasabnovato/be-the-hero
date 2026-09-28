@@ -1,34 +1,28 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "be-the-hero-mobile",
+  "version": "2.0.0",
+  "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+    "check": "npx expo install --check"
   },
   "dependencies": {
-    "@react-native-community/masked-view": "^0.1.10",
-    "@react-navigation/native": "^5.7.3",
-    "@react-navigation/stack": "^5.9.0",
-    "axios": "^0.20.0",
-    "expo": "~38.0.8",
-    "expo-mail-composer": "~8.2.1",
-    "expo-status-bar": "^1.0.2",
-    "intl": "^1.2.5",
-    "react": "~16.11.0",
-    "react-dom": "~16.11.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
-    "react-native-gesture-handler": "~1.6.0",
-    "react-native-reanimated": "~1.9.0",
-    "react-native-safe-area-context": "~3.0.7",
-    "react-native-screens": "~2.9.0",
-    "react-native-web": "~0.11.7",
-    "react-navigation-stack": "^2.8.2"
+    "@expo/vector-icons": "^15.0.2",
+    "@react-navigation/native": "^7.4.1",
+    "@react-navigation/native-stack": "^7.19.2",
+    "expo": "~57.0.25",
+    "expo-constants": "~57.0.19",
+    "expo-mail-composer": "~57.0.2",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "babel-preset-expo": "~8.1.0"
-  },
-  "private": true
+    "@babel/core": "^7.26.0"
+  }
 }

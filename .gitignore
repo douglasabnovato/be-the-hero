@@ -1,1 +1,7 @@
 /arquivos
+
+node_modules/
+.env
+.expo/
+.expo-shared/
+*.sqlite
