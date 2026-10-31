@@ -1,3 +1,5 @@
+> **Projeto de estudo.** Estado conferido em 30/10/2026: 2 endereço(s) citado(s) abaixo não responde(m). Detalhes em [docs/AVALIACAO.md](docs/AVALIACAO.md) e próximos passos em [docs/PLANO-ESTRATEGICO.md](docs/PLANO-ESTRATEGICO.md).
+
 ## Be The Hero
 
 ![Be The Hero](/frontend/images/be-the-hero.jpg)
