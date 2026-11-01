@@ -10,9 +10,9 @@ Nível N1 (estudo): um registro honesto do aprendizado, que roda seguindo o READ
 
 | Etapa | Entrega | Situação |
 |---|---|---|
-| 1 | Aviso de projeto de estudo e estado real no README | Neste PR |
-| 2 | CI de verificação | Neste PR |
-| 3 | Corrigir o que o CI mostrar como quebrado | Conferir o resultado do CI |
+| 1 | Aviso de projeto de estudo e estado real no README | Concluído |
+| 2 | CI de verificação | Concluído |
+| 3 | Corrigir o que o CI mostrar como quebrado | CI verde em 01/11/2026 |
 | 4 | Retirar os links quebrados; publicar de novo é opcional | Retirados em 31/10/2026 |
 | 5 | Manter como estudo ou arquivar | Decisão do responsável |
 
