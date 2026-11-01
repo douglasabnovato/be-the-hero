@@ -1,4 +1,4 @@
-> **Projeto de estudo.** Estado conferido em 30/10/2026: 2 endereço(s) citado(s) abaixo não responde(m). Detalhes em [docs/AVALIACAO.md](docs/AVALIACAO.md) e próximos passos em [docs/PLANO-ESTRATEGICO.md](docs/PLANO-ESTRATEGICO.md).
+> **Projeto de estudo.** Estado conferido em 31/10/2026: os endereços que seguem fora do ar foram retirados deste README. Detalhes em [docs/AVALIACAO.md](docs/AVALIACAO.md) e próximos passos em [docs/PLANO-ESTRATEGICO.md](docs/PLANO-ESTRATEGICO.md).
 
 ## Be The Hero
 
@@ -319,10 +319,10 @@ cd frontend && cp .env.example .env && npm install && npm run dev
 cd mobile && cp .env.example .env && npm install && npx expo start
 ```
 
-#### Em produção
+#### Publicação
 
-- Painel das ONGs: https://be-the-hero-web.onrender.com · API: https://be-the-hero-api.onrender.com/health
-- Hospedagem gratuita: Render (API + site estático no mesmo `render.yaml`) com PostgreSQL no Neon, publicada a cada push na `master`. O app mobile usa a API publicada via `EXPO_PUBLIC_API_URL`.
+- API: https://be-the-hero-api.onrender.com/health. O painel das ONGs está fora do ar; para vê-lo, rode localmente (seção "Como executar").
+- Hospedagem prevista: Render (API + site estático no mesmo `render.yaml`) com PostgreSQL no Neon, publicada a cada push na `master`. O app mobile usa a API publicada via `EXPO_PUBLIC_API_URL`.
 - Passo a passo completo (Neon, Render, CI e conferência): [docs/DEPLOY.md](docs/DEPLOY.md).
 
 #### Considerações Finais
