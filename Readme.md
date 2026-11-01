@@ -165,6 +165,9 @@ Um projeto para cadastrar heróis que poderão contribuir acessando o perfil.
 
 #### Mobile 
 
+App móvel: Expo 57, React Native 0.86. O CI instala, testa e empacota para Android.
+
+
 - [x] 3. Mobile - React Native
 - [x] 3.1.1. Instalando Expo de forma Global (-g): `npm install -g expo-cli`
 - [x] 3.1.2. Executar o Expo: `expo -h`
