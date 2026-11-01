@@ -2,3 +2,4 @@ node_modules/
 .expo/
 .expo-shared/
 .env
+ci-export/
