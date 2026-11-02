@@ -14,7 +14,7 @@
 | 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: Sem API, o logon mostrou "Sem conexão com o servidor". |
 | 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Não medido: Sem publicação verificada neste ciclo. |
 | 8 | Acessibilidade básica | axe e teclado | Atende: axe sem violações em 2 telas; foco visível; sem rolagem em 375 px. |
-| 9 | Segurança e conformidade | Riscos decididos | Parcial: Resta 1 alerta alto em `backend`; `db.sqlite` e `test.sqlite` seguem versionados. |
+| 9 | Segurança e conformidade | Riscos decididos | Parcial: os bancos com e-mail e WhatsApp e o cache `.expo` saíram do Git em 02/11/2026, mas seguem no histórico; a API ficou sem alerta alto. |
 | 10 | Entrega confiável | CI verde antes de entrar na principal | Atende: CI verde no PR deste ciclo; a principal segue sem proteção. |
 | 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: Testes automatizados rodam no CI. |
 | 12 | Documentação honesta | O README ensina a rodar | Atende: Comandos conferidos com o `package.json`; aviso de estudo no README. |
