@@ -32,4 +32,6 @@ Cada endereço foi testado duas vezes, com intervalo de 2 minutos, para dar temp
 | https://be-the-hero-web.onrender.com | 404 | 404 | Retirado do README |
 | https://be-the-hero-api.onrender.com/health | TimeoutError | 200 | Mantido |
 
+> **Correção de 06/11/2026:** o 200 vinha de outro projeto. O endereço serve uma página "API do projeto Be The Hero" com link para `paulloclara/be-the-hero`, e não a nossa API. O link saiu do README; decisão na #15.
+
 As instruções de execução do README foram conferidas com os scripts do `package.json`. Os comandos não foram executados nesta revisão; o CI cobre instalação, testes e build onde existe.
