@@ -34,7 +34,10 @@ const incident = z.object({
     .refine((n) => Number.isFinite(n) && n > 0 && n <= 1_000_000, "Informe o valor em reais (ex.: 120,00)."),
 });
 
-const page = z.object({ page: z.coerce.number().int().min(1).max(10_000).default(1) });
+const page = z.object({
+  page: z.coerce.number().int().min(1).max(10_000).default(1),
+  uf: z.string().trim().toUpperCase().refine((u) => UFS.includes(u), "UF inválida.").optional(),
+});
 
 /* Mensagens legíveis de um erro do zod */
 const messages = (error) => error.issues.map((i) => i.message);

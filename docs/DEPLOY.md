@@ -82,7 +82,7 @@ Já estava pronto do ciclo anterior: migrações rodando na subida da API, `trus
 3. Tirar do Git o cache do Expo (348 arquivos):
    `git rm -r --cached mobile/.expo mobile/.expo-shared frontend/.expo`
 4. Remover os arquivos substituídos:
-   `git rm -r backend/jest.config.js backend/src/routes.js backend/src/controllers backend/tests/integration/ong.spec.js backend/tests/unit/generateUniqueId.spec.js frontend/README.md frontend/public/index.html frontend/src/index.js frontend/src/App.js frontend/src/routes.js frontend/src/Header.js frontend/src/services/api.js frontend/src/pages/*/index.js frontend/yarn.lock mobile/src/services/api.js mobile/yarn.lock`
+   `git rm -r backend/jest.config.js backend/src/routes.js backend/src/controllers backend/tests/integration/ong.spec.js backend/tests/unit/generateUniqueId.spec.js frontend/README.md frontend/public/index.html frontend/src/index.js frontend/src/App.js frontend/src/routes.js frontend/src/Header.js frontend/src/services/api.js frontend/src/pages/*/index.js frontend/yarn.lock mobile/src/services/api.js mobile/yarn.lock` (feito em 06/11/2026)
 5. Ativar o CI (a pasta `.github` é protegida para a ferramenta que preparou o projeto):
    `mkdir -p .github/workflows && mv ci/github-actions-ci.yml .github/workflows/ci.yml && rmdir ci`
 6. `git status` (não podem aparecer `.sqlite`, `.expo/`, `.env`, `build/` nem `node_modules/` como adicionados)

@@ -324,9 +324,31 @@ cd mobile && cp .env.example .env && npm install && npx expo start
 
 #### Publicação
 
-- API: https://be-the-hero-api.onrender.com/health. O painel das ONGs está fora do ar; para vê-lo, rode localmente (seção "Como executar").
+- Fora do ar. Em 06/11/2026 o painel respondeu 404, e o endereço da API previsto no `render.yaml` serve a API de outro projeto. Para ver o projeto, rode localmente (seção "Como executar"). Decisão na #15.
 - Hospedagem prevista: Render (API + site estático no mesmo `render.yaml`) com PostgreSQL no Neon, publicada a cada push na `master`. O app mobile usa a API publicada via `EXPO_PUBLIC_API_URL`.
 - Passo a passo completo (Neon, Render, CI e conferência): [docs/DEPLOY.md](docs/DEPLOY.md).
+
+## Estado e próximos passos (ciclo de 03/11/2026)
+
+Projeto de estudo (N1): 7 de 10 critérios aplicáveis atendidos. Ainda não finalizado.
+
+**O que foi feito**
+- Versão 2.0: rota que expunha os IDs de acesso removida, sessão com token e app voltando a compilar (#9).
+- App móvel incluído no CI (#7).
+- Bancos com e-mail e WhatsApp fora do Git e `zod` atualizado (#12).
+- Neste ciclo: CI também nos PRs para `developer/**`, código antigo e `yarn.lock` removidos, filtro `?uf=` na lista pública de casos (#14).
+
+**O que queremos fazer**
+- #15 Decidir a publicação no Render (responsável).
+- #16 Proteger a `master` com PR e CI obrigatórios (responsável).
+- #17 Decidir o histórico com os bancos e ligar os alertas do Dependabot (responsável).
+- #18 Filtrar casos por UF no app móvel.
+- #19 Percorrer o cadastro de ONG e de caso na tela.
+- #20 Editar caso e marcar como resolvido.
+
+**Onde está a documentação**
+- Estado e critérios: [docs/MVP.md](docs/MVP.md)
+- Plano, pesquisa e backlog: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md) (seção "Ciclo de 03/11/2026")
 
 #### Considerações Finais
 
