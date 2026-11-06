@@ -110,6 +110,17 @@ describe("casos", () => {
     assert.equal((await request(app).get("/incidents?page=0")).status, 400);
   });
 
+  test("filtra a lista pela UF da ONG e recusa UF inválida", async () => {
+    const pi = await newOng({ email: "contato@ongpi.org", city: "Teresina", uf: "pi" });
+    await newIncident(pi.token, { title: "Caso no Piauí" });
+    const r = await request(app).get("/incidents?uf=pi");
+    assert.equal(r.status, 200);
+    assert.equal(r.headers["x-total-count"], "1");
+    assert.deepEqual(r.body.map((i) => i.uf), ["PI"]);
+    assert.equal(Number((await request(app).get("/incidents?uf=SC")).headers["x-total-count"]) >= 7, true);
+    assert.equal((await request(app).get("/incidents?uf=XX")).status, 400);
+  });
+
   test("só a dona apaga o caso; inexistente responde 404 (antes derrubava a API)", async () => {
     const { body } = await newIncident(a.token, { title: "Para apagar" });
     const other = await request(app).delete(`/incidents/${body.id}`).set("Authorization", `Bearer ${b.token}`);

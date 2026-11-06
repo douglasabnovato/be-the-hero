@@ -77,9 +77,10 @@ function createApp({ db, config }) {
   app.get("/incidents", async (req, res) => {
     const q = parse(v.page, req.query, res);
     if (!q) return;
-    const [{ count }] = await db("incidents").count({ count: "*" });
-    const list = await db("incidents")
-      .join("ongs", "ongs.id", "=", "incidents.ong_id")
+    /* Filtro opcional por UF da ONG (?uf=SC) */
+    const byUf = (qb) => (q.uf ? qb.where("ongs.uf", q.uf) : qb);
+    const [{ count }] = await byUf(db("incidents").join("ongs", "ongs.id", "=", "incidents.ong_id")).count({ count: "*" });
+    const list = await byUf(db("incidents").join("ongs", "ongs.id", "=", "incidents.ong_id"))
       .orderBy("incidents.id", "desc")
       .limit(PAGE_SIZE)
       .offset((q.page - 1) * PAGE_SIZE)
