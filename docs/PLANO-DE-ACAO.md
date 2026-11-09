@@ -75,3 +75,57 @@ Timebox: 60 min.
 4. README sem o link da API de outro projeto; `docs/MVP.md` com régua N1 e critério 10 em "Parcial".
 
 **Vira issue.** #15, #16 e #17 (responsável); #18, #19 e #20 (agente).
+
+## Ciclo de 07/11/2026
+
+> Executado em 09/11/2026. Branch `feature/2026-11-07` → `developer/sprint-2026-11-12` → `master` (o PR para a `master` fica aberto para o responsável). Nível: Estudo (N1), 10 critérios aplicáveis. Antes: 7 de 10.
+
+### Produto
+
+**Problema e público.** Os mesmos do ciclo anterior: ONGs divulgam casos; heróis encontram quem ajudar e falam com a ONG.
+
+**Hipótese e meta.** Uma ONG cadastra um caso em até 3 passos. Meta deste ciclo: ver o fluxo inteiro rodar no navegador, com banco de verdade, e não só nos testes da API.
+
+**O que a pesquisa trouxe.**
+
+| Ideia | O que levamos para o projeto | Fonte |
+|---|---|---|
+| O link "clique para conversar" `wa.me/<número>?text=` usa o número só com dígitos e DDI, sem `+` nem zero, e abre o WhatsApp ou o navegador | O app passa de `whatsapp://send` (falhava sem o app instalado) para `https://wa.me/55...`, limpando máscara e zero inicial | [Linkly: gerador de links do WhatsApp](https://linklyhq.com/blog/whatsapp-link-generator), [Wati: links click to chat](https://support.wati.io/en/articles/11462980-how-to-create-whatsapp-click-to-chat-links) |
+| O Playwright descarta diálogos sozinho; para aceitar um `confirm`, o ouvinte (`page.once("dialog")`) tem de existir antes do clique | O teste de ponta a ponta aceita a confirmação da exclusão do caso | [Playwright: dialogs](https://playwright.dev/docs/dialogs) |
+| O `better-sqlite3` antigo não tem binário pronto para o Node 24, e a versão 13 trocou o carregador; no Windows sem ferramentas de C++ a instalação falha | Contorno local registrado no README; o CI (Node 22) segue com o lock | [Troubleshooting do better-sqlite3](https://www.github.com/WiseLibs/better-sqlite3/blob/master/docs/troubleshooting.md), [issue #1382](https://github.com/WiseLibs/better-sqlite3/issues/1382) |
+
+**Backlog priorizado (impacto × esforço).**
+
+| Prioridade | Item | Impacto | Esforço | Destino |
+|---|---|---|---|---|
+| 1 | Fluxo principal no navegador, com teste no CI | Alto | Médio | Este ciclo (#19) |
+| 2 | `zod` vulnerável fora do app sem trocar de SDK | Alto | Baixo | Este ciclo |
+| 3 | WhatsApp por `wa.me` | Médio | Baixo | Este ciclo |
+| 4 | Filtro por UF no app | Médio | Baixo | #18 |
+| 5 | Editar caso e marcar como resolvido | Médio | Médio | #20 |
+| 6 | Publicação, proteção da `master`, histórico e Dependabot | Alto | Baixo | Responsável (#15, #16, #17) |
+
+**Fora do escopo.** Doação pelo site, contas de doador, teste em aparelho.
+
+### Engenharia
+
+**Arquitetura.** Sem mudança de forma: API Express com Knex (SQLite no desenvolvimento, PostgreSQL em produção), web em Vite e app em Expo 57. O teste de ponta a ponta sobe a API com `npm start` e um arquivo SQLite temporário (`SQLITE_FILE`), nas portas 3343 e 5183 para não colidir com o `npm run dev`.
+
+**Riscos.**
+- O teste de ponta a ponta faz o papel do app pela lista pública da API; a tela do app segue sem teste em aparelho.
+- `wa.me` exige um número com WhatsApp ativo; com número errado, o WhatsApp avisa na própria página.
+- Alertas do Dependabot desligados: ninguém é avisado de dependência vulnerável (#17).
+
+**Qualidade.** API 13 testes, web 5, app (`mobile/src/lib`), ponta a ponta 2 (Playwright 1.65). `npm audit`: API e web sem alertas; app sem alto.
+
+**Definição de pronto.** `npm test` nos três pacotes, `npm run build` no web, `npm run test:e2e` verde, CI verde no PR para a sprint, `docs/MVP.md` e README atualizados.
+
+### Plano de ação
+
+**Este ciclo executa.**
+1. Teste Playwright do fluxo principal, com job `e2e` no CI (#19).
+2. `expo` 57.0.32 no app (sai o `zod` 3 vulnerável), `shell-quote` corrigido (alerta crítico) e `vitest` 5.1 no web, só no lock.
+3. WhatsApp por `wa.me`, com testes.
+4. `docs/MVP.md` com uma tabela só e README com o estado do ciclo.
+
+**Vira issue.** O que ficou para depois está nas issues abertas (#15 a #18, #20) e nas novas listadas no README.
