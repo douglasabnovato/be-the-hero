@@ -3,3 +3,5 @@ node_modules/
 /coverage
 .env
 .expo/
+/test-results
+/playwright-report
