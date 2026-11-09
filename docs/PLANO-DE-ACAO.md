@@ -124,7 +124,7 @@ Timebox: 60 min.
 
 **Este ciclo executa.**
 1. Teste Playwright do fluxo principal, com job `e2e` no CI (#19).
-2. `expo` 57.0.32 no app (sai o `zod` 3 vulnerável), `shell-quote` corrigido (alerta crítico) e `vitest` 5.1 no web, só no lock.
+2. `expo` 57.0.32 no app (sai o `zod` 3 vulnerável), `shell-quote` corrigido (alerta crítico, só no lock) e `vitest` 5.1 no web (só no lock).
 3. WhatsApp por `wa.me`, com testes.
 4. `docs/MVP.md` com uma tabela só e README com o estado do ciclo.
 

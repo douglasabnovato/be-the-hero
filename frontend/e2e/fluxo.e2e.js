@@ -53,7 +53,12 @@ test("ONG cadastra, entra, cria e exclui um caso", async ({ page, request }) => 
 test("ID inexistente mostra o erro da API no logon", async ({ page }) => {
   await page.goto("/");
   await page.getByLabel("ID da ONG").fill("naoexiste");
+  const resposta = page.waitForResponse((r) => r.url().endsWith("/sessions") && r.request().method() === "POST");
   await page.getByRole("button", { name: "Entrar" }).click();
-  await expect(page.getByRole("alert")).toHaveText(/Nenhuma ONG encontrada|ID/);
+  const r = await resposta;
+  expect(r.status()).toBe(400);
+  const { errors } = await r.json();
+  await expect(page.getByRole("alert")).toHaveText(errors.join(" "));
+  await expect(page).not.toHaveURL(/\/profile$/);
 });
 /* Fim de fluxo.e2e.js */
