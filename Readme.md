@@ -317,38 +317,45 @@ npm test
 
 # Web (http://localhost:5173)
 cd frontend && cp .env.example .env && npm install && npm run dev
+npm test
+npx playwright install chromium && npm run test:e2e   # fluxo principal no navegador; sobe a API (porta 3343) e o web (5183) sozinho
 
 # App (Expo Go no celular)
 cd mobile && cp .env.example .env && npm install && npx expo start
 ```
 
+No Windows com Node 24, o `better-sqlite3` 13 não compila sem as ferramentas de C++. Contorno sem mexer no lock: `npm ci --ignore-scripts && npm i --no-save better-sqlite3@12` em `backend` (#22).
+
 #### Publicação
 
-- Fora do ar. Em 06/11/2026 o painel respondeu 404, e o endereço da API previsto no `render.yaml` serve a API de outro projeto. Para ver o projeto, rode localmente (seção "Como executar"). Decisão na #15.
+- Fora do ar. Em 09/11/2026 o painel respondeu 404 e a API não respondeu em 60 s; em 06/11 o endereço da API previsto no `render.yaml` serve a API de outro projeto. Para ver o projeto, rode localmente (seção "Como executar"). Decisão na #15.
 - Hospedagem prevista: Render (API + site estático no mesmo `render.yaml`) com PostgreSQL no Neon, publicada a cada push na `master`. O app mobile usa a API publicada via `EXPO_PUBLIC_API_URL`.
 - Passo a passo completo (Neon, Render, CI e conferência): [docs/DEPLOY.md](docs/DEPLOY.md).
 
-## Estado e próximos passos (ciclo de 03/11/2026)
+## Estado e próximos passos (ciclo de 07/11/2026)
 
-Projeto de estudo (N1): 7 de 10 critérios aplicáveis atendidos. Ainda não finalizado.
+Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: sim. A `master` está protegida desde 10/11/2026 (exige PR e bloqueia force push, #16). O que falta (histórico dos bancos e alertas do Dependabot, #17) depende do responsável.
 
 **O que foi feito**
 - Versão 2.0: rota que expunha os IDs de acesso removida, sessão com token e app voltando a compilar (#9).
-- App móvel incluído no CI (#7).
-- Bancos com e-mail e WhatsApp fora do Git e `zod` atualizado (#12).
-- Neste ciclo: CI também nos PRs para `developer/**`, código antigo e `yarn.lock` removidos, filtro `?uf=` na lista pública de casos (#14).
+- App móvel no CI (#7); bancos com e-mail e WhatsApp fora do Git (#12); filtro `?uf=` na lista pública (#14).
+- Ciclo de 07/11/2026: fluxo principal percorrido no navegador com Playwright (cadastro da ONG, logon, caso criado e excluído), rodando no CI no job `e2e` (#19).
+- Contato pelo app com link `wa.me`, que abre mesmo sem o WhatsApp instalado.
+- Dependências: `zod` vulnerável fora do app (expo 57.0.32), `shell-quote` com alerta crítico corrigido, `vitest` 5.1 no web.
 
 **O que queremos fazer**
-- #15 Decidir a publicação no Render (responsável).
-- #16 Proteger a `master` com PR e CI obrigatórios (responsável).
+- #15 Decidir a publicação no Render (responsável). O painel respondeu 404 em 09/11/2026, por isso não há link aqui.
+- #16 Proteger a `master`: feito em 10/11/2026 (ruleset `principal-protegida`); a issue fecha no merge da `master`.
 - #17 Decidir o histórico com os bancos e ligar os alertas do Dependabot (responsável).
 - #18 Filtrar casos por UF no app móvel.
-- #19 Percorrer o cadastro de ONG e de caso na tela.
 - #20 Editar caso e marcar como resolvido.
+- #22 Rodar a API no Windows com Node 24 sem compilar o `better-sqlite3`.
+- #23 Mesclar o ciclo de 07/11/2026 na sprint e na `master` (responsável).
+- #24 Checar acessibilidade com axe no teste de ponta a ponta.
 
 **Onde está a documentação**
 - Estado e critérios: [docs/MVP.md](docs/MVP.md)
-- Plano, pesquisa e backlog: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md) (seção "Ciclo de 03/11/2026")
+- Plano, pesquisa e backlog: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md) (seção "Ciclo de 07/11/2026")
 
 #### Considerações Finais
 

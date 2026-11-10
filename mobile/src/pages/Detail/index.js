@@ -25,7 +25,7 @@ export default function Detail() {
     try {
       await Linking.openURL(whatsappUrl(incident));
     } catch {
-      Alert.alert("WhatsApp não encontrado", "Instale o WhatsApp ou use o e-mail.");
+      Alert.alert("Não foi possível abrir o WhatsApp", "Tente de novo ou use o e-mail.");
     }
   }
 
