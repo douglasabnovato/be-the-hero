@@ -334,7 +334,7 @@ No Windows com Node 24, o `better-sqlite3` 13 não compila sem as ferramentas de
 
 ## Estado e próximos passos (ciclo de 07/11/2026)
 
-Projeto de estudo (N1): 8 de 10 critérios aplicáveis atendidos. Finalizado: sim. O que falta (proteger a `master`, #16; histórico dos bancos e alertas do Dependabot, #17) depende do responsável.
+Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: sim. A `master` está protegida desde 10/11/2026 (exige PR e bloqueia force push, #16). O que falta (histórico dos bancos e alertas do Dependabot, #17) depende do responsável.
 
 **O que foi feito**
 - Versão 2.0: rota que expunha os IDs de acesso removida, sessão com token e app voltando a compilar (#9).
@@ -345,7 +345,7 @@ Projeto de estudo (N1): 8 de 10 critérios aplicáveis atendidos. Finalizado: si
 
 **O que queremos fazer**
 - #15 Decidir a publicação no Render (responsável). O painel respondeu 404 em 09/11/2026, por isso não há link aqui.
-- #16 Proteger a `master` com PR e CI obrigatórios (responsável).
+- #16 Proteger a `master`: feito em 10/11/2026 (ruleset `principal-protegida`); a issue fecha no merge da `master`.
 - #17 Decidir o histórico com os bancos e ligar os alertas do Dependabot (responsável).
 - #18 Filtrar casos por UF no app móvel.
 - #20 Editar caso e marcar como resolvido.
