@@ -337,7 +337,7 @@ No Windows com Node 24, `npm ci` na API já funciona sem as ferramentas de C++: 
 
 ## Estado e próximos passos (ciclo de 16/11/2026)
 
-Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: sim. O que falta (histórico dos bancos e alertas do Dependabot, #17) depende do responsável. A `master` está protegida, com os 4 jobs do CI exigidos.
+Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: não. O critério 9 espera o histórico dos bancos (#17, responsável) e 2 alertas do Dependabot no app móvel, ligados em 16/11/2026, sem correção dentro do Expo 57 (#38). A `master` está protegida, com os 4 jobs do CI exigidos.
 
 **O que foi feito**
 - Versão 2.0: rota que expunha os IDs de acesso removida, sessão com token e app voltando a compilar (#9).
@@ -348,7 +348,8 @@ Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: si
 **O que queremos fazer**
 - #31 Mesclar o ciclo de 16/11/2026 na sprint e na `master` (responsável).
 - #15 Decidir a publicação no Render (responsável).
-- #17 Decidir o histórico com os bancos e ligar os alertas do Dependabot (responsável).
+- #17 Decidir o histórico com os bancos (responsável). Os alertas do Dependabot foram ligados em 16/11/2026.
+- #38 Resolver os 2 alertas do Dependabot que restam no app (`minimatch` e `deepmerge`).
 - #18 Filtrar casos por UF no app móvel.
 - #20 Editar caso e marcar como resolvido.
 - #32 Tirar o `minimatch` moderado do app sem rebaixar o Expo.
