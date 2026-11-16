@@ -13,6 +13,14 @@ permissions:
 jobs:
   backend:
     runs-on: ubuntu-latest
+    # PostgreSQL de teste, o mesmo banco da produção (Neon); a senha só vale dentro do job
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 5s --health-retries 10
     defaults:
       run:
         working-directory: backend
@@ -24,7 +32,12 @@ jobs:
           cache: npm
           cache-dependency-path: backend/package-lock.json
       - run: npm ci
-      - run: npm test
+      - name: Testes da API no SQLite
+        run: npm test
+      - name: Testes da API no PostgreSQL
+        run: npm test
+        env:
+          TEST_DATABASE_URL: postgres://postgres:postgres@localhost:5432/postgres
   frontend:
     runs-on: ubuntu-latest
     defaults:

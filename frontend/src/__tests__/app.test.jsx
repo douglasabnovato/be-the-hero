@@ -1,4 +1,4 @@
-/* Testes do painel: cadastro mostra o ID, logon, perfil com exclusão e erros da API */
+/* Testes do painel: cadastro mostra o ID, logon, perfil com exclusão, erros da API, falta de rede e espera */
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, cleanup, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -23,7 +23,7 @@ describe("cadastro e logon", () => {
   it("cadastro exibe o ID na tela em vez de alert()", async () => {
     routes["POST /ongs"] = [201, { id: "a1b2c3d4e5f60718" }];
     renderAt("/register");
-    await userEvent.type(screen.getByLabelText("Nome da ONG"), "APAD");
+    await userEvent.type(screen.getByLabelText("Nome da ONG"), "ONG Patas Fictícias");
     await userEvent.click(screen.getByRole("button", { name: "Cadastrar" }));
     expect(await screen.findByText("a1b2c3d4e5f60718")).toBeTruthy();
     expect(screen.getByRole("button", { name: "Copiar ID" })).toBeTruthy();
@@ -37,13 +37,34 @@ describe("cadastro e logon", () => {
   });
 
   it("logon guarda o token e abre o perfil", async () => {
-    routes["POST /sessions"] = [200, { name: "APAD", token: "t" }];
+    routes["POST /sessions"] = [200, { name: "ONG Patas Fictícias", token: "t" }];
     routes["GET /profile"] = [200, []];
     renderAt("/");
     await userEvent.type(screen.getByLabelText("ID da ONG"), "a1b2c3d4e5f60718");
     await userEvent.click(screen.getByRole("button", { name: "Entrar" }));
-    expect(await screen.findByText("Boas-vindas, APAD.")).toBeTruthy();
+    expect(await screen.findByText("Boas-vindas, ONG Patas Fictícias.")).toBeTruthy();
     expect(screen.getByText(/Nenhum caso ainda/)).toBeTruthy();
+  });
+
+  it("sem rede, o logon avisa e libera o botão de novo", async () => {
+    globalThis.fetch = vi.fn(async () => { throw new TypeError("Failed to fetch"); });
+    renderAt("/");
+    await userEvent.type(screen.getByLabelText("ID da ONG"), "a1b2c3d4e5f60718");
+    await userEvent.click(screen.getByRole("button", { name: "Entrar" }));
+    expect((await screen.findByRole("alert")).textContent).toBe("Sem conexão com o servidor. Tente novamente.");
+    expect(screen.getByRole("button", { name: "Entrar" }).disabled).toBe(false);
+  });
+
+  it("durante a espera, o botão mostra Entrando… e fica desligado", async () => {
+    let responder;
+    globalThis.fetch = vi.fn(() => new Promise((resolve) => { responder = resolve; }));
+    renderAt("/");
+    await userEvent.type(screen.getByLabelText("ID da ONG"), "a1b2c3d4e5f60718");
+    await userEvent.click(screen.getByRole("button", { name: "Entrar" }));
+    const botao = await screen.findByRole("button", { name: "Entrando…" });
+    expect(botao.disabled).toBe(true);
+    responder({ ok: false, status: 400, json: async () => ({ errors: ["ID inválido."] }) });
+    expect((await screen.findByRole("alert")).textContent).toBe("ID inválido.");
   });
 
   it("perfil sem sessão volta ao logon", () => {
@@ -53,7 +74,7 @@ describe("cadastro e logon", () => {
 });
 
 describe("perfil", () => {
-  beforeEach(() => localStorage.setItem("bethehero.session", JSON.stringify({ name: "APAD", token: "t" })));
+  beforeEach(() => localStorage.setItem("bethehero.session", JSON.stringify({ name: "ONG Patas Fictícias", token: "t" })));
 
   it("lista casos com valor em reais e exclui após confirmar", async () => {
     routes["GET /profile"] = [200, [{ id: 7, title: "Cadelinha", description: "Cirurgia", value: 1234.5 }]];
