@@ -1,11 +1,12 @@
 # Blueprint do Render (plano gratuito): API Node + web estático no mesmo Blueprint; banco PostgreSQL no Neon (DATABASE_URL)
+# Nomes conferidos em 16/11/2026: be-the-hero-api.onrender.com já é de outra conta; be-the-hero-ongs-api e be-the-hero-web estavam livres (x-render-routing: no-server)
 services:
   - type: web
-    name: be-the-hero-api
+    name: be-the-hero-ongs-api
     runtime: node
     plan: free
     rootDir: backend
-    buildCommand: npm ci
+    buildCommand: npm ci # .npmrc com ignore-scripts: usa o binário pronto do better-sqlite3, sem compilar
     startCommand: npm start
     healthCheckPath: /health
     autoDeployTrigger: commit
@@ -35,4 +36,4 @@ services:
       - key: NODE_VERSION
         value: "22"
       - key: VITE_API_URL
-        value: https://be-the-hero-api.onrender.com
+        value: https://be-the-hero-ongs-api.onrender.com
