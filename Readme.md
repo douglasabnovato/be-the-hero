@@ -1,4 +1,4 @@
-> **Projeto de estudo.** Estado conferido em 31/10/2026: os endereços que seguem fora do ar foram retirados deste README. Detalhes em [docs/AVALIACAO.md](docs/AVALIACAO.md) e próximos passos em [docs/PLANO-ESTRATEGICO.md](docs/PLANO-ESTRATEGICO.md).
+> **Projeto de estudo (N1)**, da Semana OmniStack 11. Estado conferido em 16/11/2026: fora do ar, roda localmente. Estado e critérios em [docs/MVP.md](docs/MVP.md); próximos passos na seção "Estado e próximos passos", mais abaixo.
 
 ## Be The Hero
 
@@ -304,58 +304,63 @@ App móvel: Expo 57, React Native 0.86. O CI instala, testa e empacota para Andr
 - [x] PostgreSQL em produção (Neon, gratuito) e SQLite no desenvolvimento, com as mesmas migrações
 - [x] Web em Vite 8 + React 18 (ID exibido na tela, sem `alert()`), acessível e responsivo
 - [x] App em Expo SDK 57 (antes não compilava: erro de sintaxe no estilo e texto fora de `<Text>`)
-- [x] 17 testes automatizados (API em SQLite e PostgreSQL + web)
+- [x] Testes automatizados: 17 na API (no SQLite e no PostgreSQL), 7 no web, 3 no app e 3 de ponta a ponta no navegador (situação em 16/11/2026)
 
 Detalhes em [docs/ANALISE.md](docs/ANALISE.md), [docs/ARQUITETURA.md](docs/ARQUITETURA.md), [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md) e [docs/DEPLOY.md](docs/DEPLOY.md).
 
 #### Como executar
 
 ```bash
-# API (http://localhost:3333) — SQLite local, sem configurar banco
-cd backend && cp .env.example .env && npm install && npm run dev
-npm test
+# API (http://localhost:3333): SQLite local, sem configurar banco
+cd backend && cp .env.example .env && npm ci
+npm run seed   # opcional: 2 ONGs e 4 casos fictícios; entre no painel com o ID de0000000000a001
+npm run dev
+npm test       # 17 testes (para rodar também no PostgreSQL: TEST_DATABASE_URL=postgres://...)
 
 # Web (http://localhost:5173)
-cd frontend && cp .env.example .env && npm install && npm run dev
-npm test
-npx playwright install chromium && npm run test:e2e   # fluxo principal no navegador; sobe a API (porta 3343) e o web (5183) sozinho
+cd frontend && cp .env.example .env && npm ci && npm run dev
+npm test       # 7 testes
+npx playwright install chromium && npm run test:e2e   # fluxo principal no navegador, com axe e teclado; sobe a API (porta 3343) e o web (5183) sozinho
 
 # App (Expo Go no celular)
-cd mobile && cp .env.example .env && npm install && npx expo start
+cd mobile && cp .env.example .env && npm ci && npx expo start
+npm test       # 3 testes
 ```
 
-No Windows com Node 24, o `better-sqlite3` 13 não compila sem as ferramentas de C++. Contorno sem mexer no lock: `npm ci --ignore-scripts && npm i --no-save better-sqlite3@12` em `backend` (#22).
+No Windows com Node 24, `npm ci` na API já funciona sem as ferramentas de C++: o `better-sqlite3` 13.2 traz binário pronto, e o `backend/.npmrc` (`ignore-scripts=true`) impede o npm de tentar compilar (#22).
 
 #### Publicação
 
-- Fora do ar. Em 09/11/2026 o painel respondeu 404 e a API não respondeu em 60 s; em 06/11 o endereço da API previsto no `render.yaml` serve a API de outro projeto. Para ver o projeto, rode localmente (seção "Como executar"). Decisão na #15.
-- Hospedagem prevista: Render (API + site estático no mesmo `render.yaml`) com PostgreSQL no Neon, publicada a cada push na `master`. O app mobile usa a API publicada via `EXPO_PUBLIC_API_URL`.
-- Passo a passo completo (Neon, Render, CI e conferência): [docs/DEPLOY.md](docs/DEPLOY.md).
+- Fora do ar. Em 16/11/2026, `https://be-the-hero-web.onrender.com` respondeu 404 (nenhum serviço com esse nome). O endereço antigo da API, `be-the-hero-api.onrender.com`, é de outra conta; por isso o `render.yaml` usa `be-the-hero-ongs-api`. Para ver o projeto, rode localmente. Decisão na #15.
+- Hospedagem prevista: Render (API + site estático no mesmo `render.yaml`) com PostgreSQL no Neon, publicada a cada push na `master`. O app usa a API publicada via `EXPO_PUBLIC_API_URL`.
+- Passo a passo: [docs/DEPLOY.md](docs/DEPLOY.md).
 
-## Estado e próximos passos (ciclo de 07/11/2026)
+## Estado e próximos passos (ciclo de 16/11/2026)
 
-Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: sim. A `master` está protegida desde 10/11/2026 (exige PR e bloqueia force push, #16). O que falta (histórico dos bancos e alertas do Dependabot, #17) depende do responsável.
+Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: sim. O que falta (histórico dos bancos e alertas do Dependabot, #17) depende do responsável. A `master` está protegida, com os 4 jobs do CI exigidos.
 
 **O que foi feito**
 - Versão 2.0: rota que expunha os IDs de acesso removida, sessão com token e app voltando a compilar (#9).
 - App móvel no CI (#7); bancos com e-mail e WhatsApp fora do Git (#12); filtro `?uf=` na lista pública (#14).
-- Ciclo de 07/11/2026: fluxo principal percorrido no navegador com Playwright (cadastro da ONG, logon, caso criado e excluído), rodando no CI no job `e2e` (#19).
-- Contato pelo app com link `wa.me`, que abre mesmo sem o WhatsApp instalado.
-- Dependências: `zod` vulnerável fora do app (expo 57.0.32), `shell-quote` com alerta crítico corrigido, `vitest` 5.1 no web.
+- Ciclo de 07/11/2026: fluxo principal no navegador com Playwright, no job `e2e` do CI; contato pelo app com `wa.me` (#25, na `master` pelo #26).
+- Ciclo de 16/11/2026 (#30): axe nas 4 telas e teste de teclado no Playwright (#24); seed de demonstração e só dados fictícios nos testes (#29); `npm ci` da API no Windows sem compilar (#22); testes da API também no PostgreSQL no CI; testes de falta de rede e de espera no web; nome livre para a API no Render.
 
 **O que queremos fazer**
-- #15 Decidir a publicação no Render (responsável). O painel respondeu 404 em 09/11/2026, por isso não há link aqui.
-- #16 Proteger a `master`: feito em 10/11/2026 (ruleset `principal-protegida`); a issue fecha no merge da `master`.
+- #31 Mesclar o ciclo de 16/11/2026 na sprint e na `master` (responsável).
+- #15 Decidir a publicação no Render (responsável).
 - #17 Decidir o histórico com os bancos e ligar os alertas do Dependabot (responsável).
 - #18 Filtrar casos por UF no app móvel.
 - #20 Editar caso e marcar como resolvido.
-- #22 Rodar a API no Windows com Node 24 sem compilar o `better-sqlite3`.
-- #23 Mesclar o ciclo de 07/11/2026 na sprint e na `master` (responsável).
-- #24 Checar acessibilidade com axe no teste de ponta a ponta.
+- #32 Tirar o `minimatch` moderado do app sem rebaixar o Expo.
+- #33 Abrir o app móvel no emulador com a seed de demonstração.
+- #34 Avisar no cadastro que os contatos da ONG ficam públicos.
+- #35 Conferir as versões do Expo no CI.
 
 **Onde está a documentação**
 - Estado e critérios: [docs/MVP.md](docs/MVP.md)
-- Plano, pesquisa e backlog: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md) (seção "Ciclo de 07/11/2026")
+- Plano, pesquisa e backlog: [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md) (seção "Ciclo de 16/11/2026")
+- Publicação: [docs/DEPLOY.md](docs/DEPLOY.md)
+- Arquitetura: [docs/ARQUITETURA.md](docs/ARQUITETURA.md)
 
 #### Considerações Finais
 
