@@ -23,7 +23,7 @@ describe("cadastro e logon", () => {
   it("cadastro exibe o ID na tela em vez de alert()", async () => {
     routes["POST /ongs"] = [201, { id: "a1b2c3d4e5f60718" }];
     renderAt("/register");
-    await userEvent.type(screen.getByLabelText("Nome da ONG"), "APAD");
+    await userEvent.type(screen.getByLabelText("Nome da ONG"), "ONG Patas Fictícias");
     await userEvent.click(screen.getByRole("button", { name: "Cadastrar" }));
     expect(await screen.findByText("a1b2c3d4e5f60718")).toBeTruthy();
     expect(screen.getByRole("button", { name: "Copiar ID" })).toBeTruthy();
@@ -37,12 +37,12 @@ describe("cadastro e logon", () => {
   });
 
   it("logon guarda o token e abre o perfil", async () => {
-    routes["POST /sessions"] = [200, { name: "APAD", token: "t" }];
+    routes["POST /sessions"] = [200, { name: "ONG Patas Fictícias", token: "t" }];
     routes["GET /profile"] = [200, []];
     renderAt("/");
     await userEvent.type(screen.getByLabelText("ID da ONG"), "a1b2c3d4e5f60718");
     await userEvent.click(screen.getByRole("button", { name: "Entrar" }));
-    expect(await screen.findByText("Boas-vindas, APAD.")).toBeTruthy();
+    expect(await screen.findByText("Boas-vindas, ONG Patas Fictícias.")).toBeTruthy();
     expect(screen.getByText(/Nenhum caso ainda/)).toBeTruthy();
   });
 
@@ -53,7 +53,7 @@ describe("cadastro e logon", () => {
 });
 
 describe("perfil", () => {
-  beforeEach(() => localStorage.setItem("bethehero.session", JSON.stringify({ name: "APAD", token: "t" })));
+  beforeEach(() => localStorage.setItem("bethehero.session", JSON.stringify({ name: "ONG Patas Fictícias", token: "t" })));
 
   it("lista casos com valor em reais e exclui após confirmar", async () => {
     routes["GET /profile"] = [200, [{ id: 7, title: "Cadelinha", description: "Cirurgia", value: 1234.5 }]];

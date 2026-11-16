@@ -75,9 +75,9 @@ Um projeto para cadastrar heróis que poderão contribuir acessando o perfil.
 - [x] 1.10.2.2. Corpo:
 ````json
 {
-	"name":"APAD",
-	"email":"contato@contato.com.br",
-	"whatsapp":"4700000000",
+	"name":"ONG Patas Fictícias",
+	"email":"contato@patas-ficticias.test",
+	"whatsapp":"00900000001",
 	"city":"Rio de Janeiro",
 	"uf":"Rio de Janeiro"
 }
