@@ -129,3 +129,61 @@ Timebox: 60 min.
 4. `docs/MVP.md` com uma tabela só e README com o estado do ciclo.
 
 **Vira issue.** O que ficou para depois está nas issues abertas (#15 a #18, #20) e nas novas listadas no README.
+
+## Ciclo de 16/11/2026
+
+> Executado em 16/11/2026. Branch `feature/2026-11-16` → `developer/sprint-2026-11-19` → `master` (o PR para a `master` fica aberto para o responsável). Nível: Estudo (N1), 10 critérios aplicáveis. A tabela de 09/11 dizia 9 de 10; conferida contra a régua, eram 8 de 10: o critério 8 estava "Atende" sem axe dentro do teste Playwright.
+
+### Produto
+
+**Problema e público.** ONGs divulgam casos que precisam de ajuda; heróis acham o caso e falam com a ONG. Projeto de curso (Semana OmniStack 11), sem usuário real.
+
+**Hipótese e meta.** Acreditamos que uma ONG nova consegue se cadastrar, entrar e publicar um caso em até 3 formulários, sem ajuda, e que o caso aparece na lista pública que o herói consulta. Saberemos quando o teste de ponta a ponta concluir esse percurso no navegador, com axe sem violações nas 4 telas, em todo PR (job `e2e` do CI). Ninguém de fora testou ainda.
+
+**O que a pesquisa trouxe.**
+
+| Ideia | O que levamos para o projeto | Fonte |
+|---|---|---|
+| O `AxeBuilder` do `@axe-core/playwright` analisa a página no estado atual; dá para filtrar por regras WCAG A e AA (`withTags`) e rodar depois de cada mudança de tela | O teste de ponta a ponta roda o axe no logon, no cadastro, no perfil com caso e no novo caso, e falha com qualquer violação | [Playwright: accessibility testing](https://playwright.dev/docs/accessibility-testing) |
+| Os nomes `.test`, `.example` e `example.com/.org/.net` são reservados e nunca vão existir na internet | Testes, seed e exemplos usam só e-mails nesses domínios; um teste recusa qualquer outro domínio na seed | [RFC 2606](https://www.rfc-editor.org/rfc/rfc2606) |
+| Seeds do Knex ficam numa pasta própria e rodam com `knex seed:run`, depois das migrações | Seed de demonstração com 2 ONGs e 4 casos fictícios (`npm run seed`), que se recusa a rodar contra o banco de produção | [Knex: seed files](https://knexjs.org/guide/migrations.html#seed-files) |
+| Com `ignore-scripts`, o npm não roda scripts de instalação das dependências, mas `npm start` e `npm test` seguem funcionando | O `better-sqlite3` 13.2 já traz binários prontos; um `.npmrc` com `ignore-scripts=true` na API evita a compilação com `node-gyp` que falhava no Windows (#22) | [npm config: ignore-scripts](https://docs.npmjs.com/cli/v11/using-npm/config#ignore-scripts) |
+
+**Backlog priorizado (impacto × esforço).**
+
+| Prioridade | Item | Impacto | Esforço | Destino |
+|---|---|---|---|---|
+| 1 | axe e teclado dentro do teste de ponta a ponta | Alto | Baixo | Este ciclo (#24) |
+| 2 | Dados só fictícios nos testes, seed de demonstração | Alto | Baixo | Este ciclo (#29) |
+| 3 | `npm ci` da API no Windows sem compilar | Médio | Baixo | Este ciclo (#22) |
+| 4 | Testes da API também no PostgreSQL no CI | Médio | Baixo | Este ciclo |
+| 5 | Nome livre para a API no Render | Médio | Baixo | Este ciclo (`render.yaml`), publicação com o responsável (#15) |
+| 6 | Filtro por UF no app; editar e resolver caso | Médio | Médio | #18, #20 |
+
+**Fora do escopo.** Doação pelo site, contas de doador, troca do ID de acesso por senha (regra de negócio do curso), teste em aparelho.
+
+### Engenharia
+
+**Arquitetura.** Sem mudança de forma: API Express 5 com Knex (SQLite no desenvolvimento, PostgreSQL no Neon em produção), web em Vite 8 com React 18 e app em Expo 57. A seed de demonstração entra em `backend/src/database/seeds/`. O CI ganha o PostgreSQL 16 como serviço no job `backend`.
+
+**Riscos.**
+- O app web não tem tema escuro próprio (nenhum `prefers-color-scheme` no CSS); o axe roda só no claro, porque o escuro repetiria a mesma tela.
+- O `.npmrc` com `ignore-scripts=true` vale para todas as dependências da API; se alguma passar a precisar de script de instalação, ela quebra. Hoje só o `better-sqlite3` tinha, e ele traz binários prontos.
+- O `minimatch` moderado do app só sai com o Expo 52 (rebaixar), o que não faz sentido; fica registrado.
+- Alertas do Dependabot desligados (#17).
+
+**Qualidade.** API 17 testes no SQLite (13 deles também no PostgreSQL no CI; os 4 da seed só no SQLite); web 7 no Vitest; app 3 no Jest; ponta a ponta no Playwright com axe e teclado. `npm audit --omit=dev`: API e web 0; app 3 moderados.
+
+**Definição de pronto.** `npm test` nos três pacotes, `npm run build` no web, `npm run test:e2e` verde, CI verde no PR para a sprint, revisão independente feita, `docs/MVP.md` e README atualizados.
+
+### Plano de ação
+
+**Este ciclo executa.**
+1. Dependências: `better-sqlite3` 13.2, `express` 5.3, `pg` 8.23.1, `react-router-dom` 7.18.5, lock do app sem o `glob` vulnerável.
+2. `.npmrc` na API: `npm ci` sem compilar no Windows (#22).
+3. axe nas 4 telas e teste de teclado no Playwright (#24).
+4. Dados fictícios nos testes e no README, seed de demonstração com teste (#29).
+5. PostgreSQL no CI e fim do workflow duplicado em `ci/`.
+6. `render.yaml` com nome livre para a API, `docs/DEPLOY.md` refeito, `docs/MVP.md` e README.
+
+**Vira issue.** Publicação (#15), histórico e Dependabot (#17), filtro por UF no app (#18), editar caso (#20) e as novas abertas neste ciclo, listadas no README.

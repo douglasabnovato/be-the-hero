@@ -11,7 +11,8 @@ const { parseMoney, onlyDigits } = require("../src/lib/validation");
 const env = process.env.TEST_DATABASE_URL ? { DATABASE_URL: process.env.TEST_DATABASE_URL, DATABASE_SSL: "false" } : { NODE_ENV: "test" };
 const db = createConnection(env);
 const app = createApp({ db, config: loadConfig({ AUTH_SECRET: "k".repeat(32) }) });
-const ONG = { name: "APAD", email: "contato@apad.org", whatsapp: "(47) 99999-0000", city: "Blumenau", uf: "sc" };
+/* Dados fictícios por construção: domínio reservado (RFC 2606) e DDD 00, que não existe (#29) */
+const ONG = { name: "ONG Patas Fictícias", email: "contato@patas-ficticias.test", whatsapp: "(00) 90000-0001", city: "Blumenau", uf: "sc" };
 
 /* Cadastra uma ONG e devolve { id, token } */
 async function newOng(extra = {}) {
@@ -37,7 +38,7 @@ describe("regras puras", () => {
     assert.equal(parseMoney("99.90"), 99.9);
     assert.ok(Number.isNaN(parseMoney("12,345")));
   });
-  test("WhatsApp só com dígitos e sem 55", () => assert.equal(onlyDigits("+55 (47) 99999-0000"), "47999990000"));
+  test("WhatsApp só com dígitos e sem 55", () => assert.equal(onlyDigits("+55 (00) 90000-0001"), "00900000001"));
 });
 
 describe("ONGs e sessão", () => {
@@ -46,7 +47,7 @@ describe("ONGs e sessão", () => {
     assert.equal(r.status, 201);
     assert.match(r.body.id, /^[0-9a-f]{16}$/);
     const row = await db("ongs").where("id", r.body.id).first();
-    assert.equal(row.whatsapp, "47999990000");
+    assert.equal(row.whatsapp, "00900000001");
     assert.equal(row.uf, "SC");
   });
 
@@ -65,7 +66,7 @@ describe("ONGs e sessão", () => {
     const { id } = (await request(app).post("/ongs").send(ONG)).body;
     const ok = await request(app).post("/sessions").send({ id: id.toUpperCase() });
     assert.equal(ok.status, 200);
-    assert.equal(ok.body.name, "APAD");
+    assert.equal(ok.body.name, "ONG Patas Fictícias");
     assert.ok(ok.body.token);
     const bad = await request(app).post("/sessions").send({ id: "0000000000000000" });
     assert.equal(bad.status, 400);
@@ -104,14 +105,14 @@ describe("casos", () => {
     assert.equal(p1.headers["x-total-count"], "7");
     assert.equal(p1.body.length, 5);
     assert.equal(p1.body[0].name, "ONG B");
-    assert.equal(p1.body[0].whatsapp, "47999990000");
+    assert.equal(p1.body[0].whatsapp, "00900000001");
     const p2 = await request(app).get("/incidents?page=2");
     assert.equal(p2.body.length, 2);
     assert.equal((await request(app).get("/incidents?page=0")).status, 400);
   });
 
   test("filtra a lista pela UF da ONG e recusa UF inválida", async () => {
-    const pi = await newOng({ email: "contato@ongpi.org", city: "Teresina", uf: "pi" });
+    const pi = await newOng({ email: "contato@ongpi.test", city: "Teresina", uf: "pi" });
     await newIncident(pi.token, { title: "Caso no Piauí" });
     const r = await request(app).get("/incidents?uf=pi");
     assert.equal(r.status, 200);
