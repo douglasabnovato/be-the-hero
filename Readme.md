@@ -355,6 +355,7 @@ Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: si
 - #33 Abrir o app móvel no emulador com a seed de demonstração.
 - #34 Avisar no cadastro que os contatos da ONG ficam públicos.
 - #35 Conferir as versões do Expo no CI.
+- #36 Fazer a seed e o binário do `better-sqlite3` falharem cedo.
 
 **Onde está a documentação**
 - Estado e critérios: [docs/MVP.md](docs/MVP.md)
