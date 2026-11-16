@@ -337,7 +337,7 @@ No Windows com Node 24, `npm ci` na API já funciona sem as ferramentas de C++: 
 
 ## Estado e próximos passos (ciclo de 16/11/2026)
 
-Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: não. O critério 9 espera o histórico dos bancos (#17, responsável) e 2 alertas do Dependabot no app móvel, ligados em 16/11/2026, sem correção dentro do Expo 57 (#38). A `master` está protegida, com os 4 jobs do CI exigidos.
+Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: sim. O critério 9 espera só o histórico dos bancos (#17, responsável). Os 2 alertas do Dependabot no app móvel (16/11/2026) estão aceitos na [ADR-06](docs/adr/0006-aceitar-alertas-de-desenvolvimento-do-dependabot.md), porque ficam nas ferramentas de build e de teste e não entram no app. A `master` está protegida, com os 4 jobs do CI exigidos.
 
 **O que foi feito**
 - Versão 2.0: rota que expunha os IDs de acesso removida, sessão com token e app voltando a compilar (#9).
@@ -349,7 +349,7 @@ Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: n�
 - #31 Mesclar o ciclo de 16/11/2026 na sprint e na `master` (responsável).
 - #15 Decidir a publicação no Render (responsável).
 - #17 Decidir o histórico com os bancos (responsável). Os alertas do Dependabot foram ligados em 16/11/2026.
-- #38 Resolver os 2 alertas do Dependabot que restam no app (`minimatch` e `deepmerge`).
+- #38 Os 2 alertas que restam no app (`minimatch` e `deepmerge`) estão na [ADR-06](docs/adr/0006-aceitar-alertas-de-desenvolvimento-do-dependabot.md); revisar na migração para o Expo 58.
 - #18 Filtrar casos por UF no app móvel.
 - #20 Editar caso e marcar como resolvido.
 - #32 Tirar o `minimatch` moderado do app sem rebaixar o Expo.
