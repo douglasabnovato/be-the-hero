@@ -1,10 +1,10 @@
 # MVP — be-the-hero
 
-> Revisto em 16/11/2026 (ciclo de 16/11/2026). Nível: **Estudo (N1)**. Os critérios 5 e 7 não se aplicam ao N1 e saem da conta. Testado no Windows com Node 24 e no CI (Ubuntu, Node 22), no clone da `feature/2026-11-16`. Não houve teste com pessoas nem em aparelho real.
+> Revisto em 16/11/2026 (ciclo de 16/11/2026; critério 9 revisto às 12h01, com os alertas do Dependabot ligados). Nível: **Estudo (N1)**. Os critérios 5 e 7 não se aplicam ao N1 e saem da conta. Testado no Windows com Node 24 e no CI (Ubuntu, Node 22), no clone da `feature/2026-11-16`. Não houve teste com pessoas nem em aparelho real.
 
 **Resumo:** 9 de 10 aplicáveis atendidos
 
-**Finalizado:** sim — o único critério aplicável que falta é o 9, que depende do responsável (#17, rótulo `depende-do-responsavel`).
+**Finalizado:** não — o único critério aplicável que falta é o 9. Uma parte depende do responsável (histórico dos bancos, #17, `depende-do-responsavel`); a outra são 2 alertas do Dependabot no app sem correção dentro do Expo 57 (#38), que não dependem só dele.
 
 Antes deste ciclo: a tabela de 09/11 dizia 9 de 10, mas o critério 8 estava "Atende" sem axe dentro do teste Playwright. Conferida contra a régua, eram 8 de 10.
 
@@ -18,7 +18,7 @@ Antes deste ciclo: a tabela de 09/11 dizia 9 de 10, mas o critério 8 estava "At
 | 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta | Atende: sem API, o logon mostra "Sem conexão com o servidor"; ID inexistente mostra o erro da API no navegador; lista vazia mostra "Nenhum caso ainda"; botão em "Entrando…" durante a espera; UF inválida devolve 400. | `npm test` em `frontend` (7 passed, com falta de rede e espera) e `npm run test:e2e` (3 passed), run 43803597415, 16/11/2026 |
 | 7 | Desempenho aceitável | LCP até 2,5 s no celular | Não se aplica (N1). Fora do ar: `be-the-hero-web.onrender.com` respondeu 404 (`x-render-routing: no-server`). | `curl`, 16/11/2026; #15 |
 | 8 | Acessibilidade básica | axe e teclado | Atende: axe (WCAG 2.1 A e AA) sem violações no logon, no cadastro, no novo caso e no perfil com um caso real, em largura de desktop; teste de teclado: Tab passa pelo ID, pelo botão e pelo link com contorno de 3 px, e Enter abre o cadastro. O app não tem tema escuro próprio (nenhum `prefers-color-scheme` no CSS), por isso o axe roda só no claro. Não há diálogo próprio para testar Esc (a exclusão usa o `confirm` do navegador). | `frontend/e2e/fluxo.e2e.js`: 3 passed, run 43803597415, 16/11/2026. Conferido que falha: sem o `alt` do logo, `npx playwright test -g "ONG cadastra" --retries=0` acusou `logon: image-alt (1)`, local, 16/11/2026 |
-| 9 | Segurança e conformidade | `npm audit --omit=dev`, Dependabot, segredos, dados pessoais | Parcial: API e web sem alertas; app com 3 moderados (`minimatch`, que só sai rebaixando o Expo para o 52); nenhum segredo no código; testes, seed e README só com dados fictícios. Falta o que só o responsável decide: bancos com e-mail e WhatsApp no histórico e alertas do Dependabot desligados. | `npm audit --omit=dev`: API 0, web 0, app 3 moderados; `gh api .../dependabot/alerts` = 403, 16/11/2026; #17 |
+| 9 | Segurança e conformidade | `npm audit --omit=dev`, Dependabot, segredos, dados pessoais | Parcial: API e web sem alertas; nenhum segredo no código; testes, seed e README só com dados fictícios. Alertas do Dependabot ligados: 2 abertos no app (`mobile/package-lock.json`), 0 corrigidos na sprint-19, 2 restam (#38): `minimatch` 10.2.6 (médio, só corrigido na 11, que o Expo 57 não aceita) e `deepmerge` 4.3.1 (baixo, do `jest`, sem versão corrigida). Falta também o que só o responsável decide: bancos com e-mail e WhatsApp no histórico (#17). | `npm audit --omit=dev`: API 0, web 0, app 3 moderados (`minimatch`); `gh api "repos/douglasabnovato/be-the-hero/dependabot/alerts?state=open"`, 16/11/2026 12h01: 2 (#3 `minimatch`, #1 `deepmerge`); #17, #38 |
 | 10 | Entrega confiável | CI nos PRs e principal protegida | Atende: o workflow `CI` roda em PR e push para `master` e `developer/**`; a `master` tem o ruleset `principal-protegida` ativo, com PR obrigatório, sem force push nem exclusão e com os jobs `backend`, `frontend`, `mobile` e `e2e` exigidos. | `gh api repos/douglasabnovato/be-the-hero/rulesets/26932502`, 16/11/2026 |
 | 11 | Testes dos fluxos críticos | Testes no CI, sem `# skipped` | Atende: API 17 no SQLite (13 do `api.test.js` e 4 da seed) e os 13 do `api.test.js` também no PostgreSQL 16 (a seed só roda no SQLite), web 7, app 3 e ponta a ponta 3. | Run 43803597415: `# pass 17` e `# skipped 0` nos dois passos (sem reexecução: `3 passed`, nenhum `flaky`), 16/11/2026 |
 | 12 | Documentação honesta | README com comandos conferidos | Atende: comandos conferidos com o `package.json` dos três pacotes, inclusive `npm run seed` e `npm run test:e2e`; aviso de estudo; estado e próximos passos; sem link publicado, porque nada responde. | README, 16/11/2026 |
@@ -39,6 +39,8 @@ Doação pelo site, contas de doador, login com e-mail e senha (o acesso pelo ID
 axe e teclado dentro do Playwright (#24); seed de demonstração e dados só fictícios nos testes (#29); `npm ci` da API no Windows sem compilar (#22); testes da API também no PostgreSQL no CI; nome livre para a API no `render.yaml`; dependências em dia (patch e minor). PR #30.
 
 ## Histórico
+
+- 16/11/2026, 12h01: o responsável ligou os alertas do Dependabot. Os 2 abertos (app móvel, Expo 57, não congelado) não têm correção sem versão maior (#38). O critério 9 segue Parcial; o motivo deixou de ser o 403, e o Finalizado passou de "sim" para "não".
 
 ### Tabela de 09/11/2026 (ciclo de 07/11/2026): declarava 9 de 10; conferida em 16/11, eram 8 de 10
 
