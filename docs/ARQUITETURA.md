@@ -39,3 +39,4 @@ flowchart LR
 | ADR-03 | zod no lugar de celebrate | Mensagens em português e mesma lib dos outros projetos | celebrate/Joi |
 | ADR-04 | Vite + React Router 7 | CRA 3 descontinuado | Atualizar react-scripts |
 | ADR-05 | Expo SDK 57 + React Navigation 7 | SDK 38 não roda no Expo Go atual | Manter SDK 38 |
+| [ADR-06](adr/0006-aceitar-alertas-de-desenvolvimento-do-dependabot.md) | Aceitar os alertas de desenvolvimento do Dependabot (`minimatch` do `@expo/fingerprint` e `deepmerge` do `jest`) | Não entram no bundle do app nem no site; ordem do responsável de 16/11/2026 | `overrides` para o `minimatch` 11 (versão maior que o Expo 57 não aceita) |
