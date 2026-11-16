@@ -17,7 +17,7 @@ Guia para publicar a API e o painel web das ONGs sem custo. O app móvel (Expo) 
 
 | Item | Arquivo | Por quê |
 |---|---|---|
-| Serviços `be-the-hero-ongs-api` e `be-the-hero-web` | `render.yaml` | Em 16/11/2026, `be-the-hero-api.onrender.com` respondia 200 com a API de outra conta. Os dois nomes novos estavam livres |
+| Serviços `be-the-hero-ongs-api` e `be-the-hero-web` | `render.yaml` | Em 16/11/2026, `be-the-hero-api.onrender.com` respondia 200 com a API de outro projeto. Os dois nomes novos estavam livres |
 | `CORS_ORIGINS` e `VITE_API_URL` cruzados | `render.yaml` | Só a `DATABASE_URL` fica para digitar; o `AUTH_SECRET` o Render gera |
 | `NODE_VERSION` `"22"` | `render.yaml` | Mesma versão do CI |
 | `npm ci` sem compilar | `backend/.npmrc` | O `better-sqlite3` 13.2 traz binário pronto; o build da API fica mais curto |

@@ -172,7 +172,7 @@ Timebox: 60 min.
 - O `minimatch` moderado do app só sai com o Expo 52 (rebaixar), o que não faz sentido; fica registrado.
 - Alertas do Dependabot desligados (#17).
 
-**Qualidade.** API 13 testes mais os da seed, rodando em SQLite e PostgreSQL no CI; web 5 no Vitest; app 3 no Jest; ponta a ponta no Playwright com axe e teclado. `npm audit --omit=dev`: API e web 0; app 3 moderados.
+**Qualidade.** API 17 testes no SQLite (13 deles também no PostgreSQL no CI; os 4 da seed só no SQLite); web 7 no Vitest; app 3 no Jest; ponta a ponta no Playwright com axe e teclado. `npm audit --omit=dev`: API e web 0; app 3 moderados.
 
 **Definição de pronto.** `npm test` nos três pacotes, `npm run build` no web, `npm run test:e2e` verde, CI verde no PR para a sprint, revisão independente feita, `docs/MVP.md` e README atualizados.
 

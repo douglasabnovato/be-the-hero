@@ -39,6 +39,7 @@ test("cria 2 ONGs e 4 casos e pode rodar de novo sem duplicar", async () => {
 });
 
 test("a ONG da demonstração entra pelo ID e os casos aparecem na lista pública", async () => {
+  await seed(db); /* não depende do teste anterior */
   const s = await request(app).post("/sessions").send({ id: ONGS[0].id });
   assert.equal(s.status, 200);
   assert.equal(s.body.name, ONGS[0].name);

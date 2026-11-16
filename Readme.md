@@ -304,7 +304,7 @@ App móvel: Expo 57, React Native 0.86. O CI instala, testa e empacota para Andr
 - [x] PostgreSQL em produção (Neon, gratuito) e SQLite no desenvolvimento, com as mesmas migrações
 - [x] Web em Vite 8 + React 18 (ID exibido na tela, sem `alert()`), acessível e responsivo
 - [x] App em Expo SDK 57 (antes não compilava: erro de sintaxe no estilo e texto fora de `<Text>`)
-- [x] Testes automatizados: 17 na API (no SQLite e no PostgreSQL), 7 no web, 3 no app e 3 de ponta a ponta no navegador (situação em 16/11/2026)
+- [x] Testes automatizados: 17 na API no SQLite (13 deles também no PostgreSQL), 7 no web, 3 no app e 3 de ponta a ponta no navegador (situação em 16/11/2026)
 
 Detalhes em [docs/ANALISE.md](docs/ANALISE.md), [docs/ARQUITETURA.md](docs/ARQUITETURA.md), [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md) e [docs/DEPLOY.md](docs/DEPLOY.md).
 
@@ -315,7 +315,7 @@ Detalhes em [docs/ANALISE.md](docs/ANALISE.md), [docs/ARQUITETURA.md](docs/ARQUI
 cd backend && cp .env.example .env && npm ci
 npm run seed   # opcional: 2 ONGs e 4 casos fictícios; entre no painel com o ID de0000000000a001
 npm run dev
-npm test       # 17 testes (para rodar também no PostgreSQL: TEST_DATABASE_URL=postgres://...)
+npm test       # 17 testes no SQLite (com TEST_DATABASE_URL=postgres://..., os 13 do api.test.js rodam no PostgreSQL)
 
 # Web (http://localhost:5173)
 cd frontend && cp .env.example .env && npm ci && npm run dev
@@ -331,7 +331,7 @@ No Windows com Node 24, `npm ci` na API já funciona sem as ferramentas de C++: 
 
 #### Publicação
 
-- Fora do ar. Em 16/11/2026, `https://be-the-hero-web.onrender.com` respondeu 404 (nenhum serviço com esse nome). O endereço antigo da API, `be-the-hero-api.onrender.com`, é de outra conta; por isso o `render.yaml` usa `be-the-hero-ongs-api`. Para ver o projeto, rode localmente. Decisão na #15.
+- Fora do ar. Em 16/11/2026, `https://be-the-hero-web.onrender.com` respondeu 404 (nenhum serviço com esse nome). O endereço antigo da API, `be-the-hero-api.onrender.com`, responde com a API de outro projeto; por isso o `render.yaml` usa `be-the-hero-ongs-api`. Para ver o projeto, rode localmente. Decisão na #15.
 - Hospedagem prevista: Render (API + site estático no mesmo `render.yaml`) com PostgreSQL no Neon, publicada a cada push na `master`. O app usa a API publicada via `EXPO_PUBLIC_API_URL`.
 - Passo a passo: [docs/DEPLOY.md](docs/DEPLOY.md).
 
