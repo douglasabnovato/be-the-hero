@@ -304,7 +304,7 @@ App móvel: Expo 57, React Native 0.86. O CI instala, testa e empacota para Andr
 - [x] PostgreSQL em produção (Neon, gratuito) e SQLite no desenvolvimento, com as mesmas migrações
 - [x] Web em Vite 8 + React 18 (ID exibido na tela, sem `alert()`), acessível e responsivo
 - [x] App em Expo SDK 57 (antes não compilava: erro de sintaxe no estilo e texto fora de `<Text>`)
-- [x] Testes automatizados: 17 na API no SQLite (13 deles também no PostgreSQL), 7 no web, 3 no app e 3 de ponta a ponta no navegador (situação em 16/11/2026)
+- [x] Testes automatizados: 19 na API no SQLite (13 deles também no PostgreSQL), 8 no web, 3 no app e 3 de ponta a ponta no navegador (situação em 18/11/2026)
 
 Detalhes em [docs/ANALISE.md](docs/ANALISE.md), [docs/ARQUITETURA.md](docs/ARQUITETURA.md), [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md) e [docs/DEPLOY.md](docs/DEPLOY.md).
 
@@ -313,18 +313,19 @@ Detalhes em [docs/ANALISE.md](docs/ANALISE.md), [docs/ARQUITETURA.md](docs/ARQUI
 ```bash
 # API (http://localhost:3333): SQLite local, sem configurar banco
 cd backend && cp .env.example .env && npm ci
-npm run seed   # opcional: 2 ONGs e 4 casos fictícios; entre no painel com o ID de0000000000a001
+npm run seed   # opcional: 2 ONGs e 4 casos fictícios; entre no painel com o ID de0000000000a001 (recusa rodar com DATABASE_URL)
 npm run dev
-npm test       # 17 testes no SQLite (com TEST_DATABASE_URL=postgres://..., os 13 do api.test.js rodam no PostgreSQL)
+npm test       # 19 testes no SQLite (com TEST_DATABASE_URL=postgres://..., os 13 do api.test.js rodam no PostgreSQL)
 
 # Web (http://localhost:5173)
 cd frontend && cp .env.example .env && npm ci && npm run dev
-npm test       # 7 testes
+npm test       # 8 testes
 npx playwright install chromium && npm run test:e2e   # fluxo principal no navegador, com axe e teclado; sobe a API (porta 3343) e o web (5183) sozinho
 
 # App (Expo Go no celular)
 cd mobile && cp .env.example .env && npm ci && npx expo start
 npm test       # 3 testes
+npm run check  # versões conferidas contra o Expo 57 (também no CI)
 ```
 
 No Windows com Node 24, `npm ci` na API já funciona sem as ferramentas de C++: o `better-sqlite3` 13.2 traz binário pronto, e o `backend/.npmrc` (`ignore-scripts=true`) impede o npm de tentar compilar (#22).
@@ -335,7 +336,7 @@ No Windows com Node 24, `npm ci` na API já funciona sem as ferramentas de C++: 
 - Hospedagem prevista: Render (API + site estático no mesmo `render.yaml`) com PostgreSQL no Neon, publicada a cada push na `master`. O app usa a API publicada via `EXPO_PUBLIC_API_URL`.
 - Passo a passo: [docs/DEPLOY.md](docs/DEPLOY.md).
 
-## Estado e próximos passos (ciclo de 16/11/2026)
+## Estado e próximos passos (ciclo de 18/11/2026)
 
 Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: sim. O critério 9 espera só o histórico dos bancos (#17, responsável). Os 2 alertas do Dependabot no app móvel (16/11/2026) estão aceitos na [ADR-06](docs/adr/0006-aceitar-alertas-de-desenvolvimento-do-dependabot.md), porque ficam nas ferramentas de build e de teste e não entram no app. A `master` está protegida, com os 4 jobs do CI exigidos.
 
@@ -344,19 +345,15 @@ Projeto de estudo (N1): 9 de 10 critérios aplicáveis atendidos. Finalizado: si
 - App móvel no CI (#7); bancos com e-mail e WhatsApp fora do Git (#12); filtro `?uf=` na lista pública (#14).
 - Ciclo de 07/11/2026: fluxo principal no navegador com Playwright, no job `e2e` do CI; contato pelo app com `wa.me` (#25, na `master` pelo #26).
 - Ciclo de 16/11/2026 (#30): axe nas 4 telas e teste de teclado no Playwright (#24); seed de demonstração e só dados fictícios nos testes (#29); `npm ci` da API no Windows sem compilar (#22); testes da API também no PostgreSQL no CI; testes de falta de rede e de espera no web; nome livre para a API no Render.
+- Ciclo de 18/11/2026: aviso de contatos públicos no cadastro (#34); seed que recusa banco remoto antes de migrar e binário do `better-sqlite3` conferido no CI (#36); versões do Expo 57 conferidas no CI (#35).
 
 **O que queremos fazer**
-- #31 Mesclar o ciclo de 16/11/2026 na sprint e na `master` (responsável).
 - #15 Decidir a publicação no Render (responsável).
 - #17 Decidir o histórico com os bancos (responsável). Os alertas do Dependabot foram ligados em 16/11/2026.
-- #38 Os 2 alertas que restam no app (`minimatch` e `deepmerge`) estão na [ADR-06](docs/adr/0006-aceitar-alertas-de-desenvolvimento-do-dependabot.md); revisar na migração para o Expo 58.
-- #18 Filtrar casos por UF no app móvel.
-- #20 Editar caso e marcar como resolvido.
-- #32 Tirar o `minimatch` moderado do app sem rebaixar o Expo.
+- Os 2 alertas que restam no app (`minimatch` e `deepmerge`) estão na [ADR-06](docs/adr/0006-aceitar-alertas-de-desenvolvimento-do-dependabot.md); revisar na migração para o Expo 58.
 - #33 Abrir o app móvel no emulador com a seed de demonstração.
-- #34 Avisar no cadastro que os contatos da ONG ficam públicos.
-- #35 Conferir as versões do Expo no CI.
-- #36 Fazer a seed e o binário do `better-sqlite3` falharem cedo.
+- #34, #35 e #36 feitas no ciclo de 18/11/2026; fecham no merge na `master`.
+- Fora do N1 (fechadas como não planejadas em 18/11/2026): filtro por UF no app (#18) e editar caso (#20).
 
 **Onde está a documentação**
 - Estado e critérios: [docs/MVP.md](docs/MVP.md)
