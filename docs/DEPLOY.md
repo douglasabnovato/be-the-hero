@@ -34,7 +34,7 @@ Guia para publicar a API e o painel web das ONGs sem custo. O app móvel (Expo) 
 
 - O banco do Neon nasce vazio. Nenhum dado do `db.sqlite` local vai para produção.
 - **Não rode `npm run seed` em produção.** Os IDs da seed de demonstração são públicos. Com `DATABASE_URL` no ambiente ou no `.env`, o `npm run seed` sai com erro antes de qualquer migração (#36).
-- A lista pública mostra e-mail, WhatsApp e cidade da ONG; é o que permite o contato. Numa demonstração, cadastre só ONGs fictícias (`@exemplo.test`, DDD 00).
+- A lista pública mostra e-mail, WhatsApp e cidade da ONG; é o que permite o contato. A tela de cadastro avisa isso acima do botão (#34). Numa demonstração, cadastre só ONGs fictícias (`@exemplo.test`, DDD 00).
 - `AUTH_SECRET` e `DATABASE_URL` ficam só no painel do Render. Nunca no Git.
 
 ## 5. Passo a passo (responsável)

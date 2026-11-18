@@ -60,7 +60,7 @@ export default function Register() {
             <Link className="back-link" to="/">Ir para o logon</Link>
           </div>
         ) : (
-          <form onSubmit={handleRegister} noValidate>
+          <form onSubmit={handleRegister} noValidate aria-describedby="aviso-publico">
             <label htmlFor="name" className="sr-only">Nome da ONG</label>
             <input id="name" placeholder="Nome da ONG" value={form.name} onChange={set("name")} autoComplete="organization" />
             <label htmlFor="email" className="sr-only">E-mail</label>
@@ -73,6 +73,8 @@ export default function Register() {
               <label htmlFor="uf" className="sr-only">UF</label>
               <input id="uf" placeholder="UF" maxLength={2} className="uf" value={form.uf} onChange={set("uf")} autoComplete="address-level1" />
             </div>
+            {/* Os contatos aparecem na lista pública: é o que permite o contato (LGPD, art. 9º; #34) */}
+            <p className="aviso-publico" id="aviso-publico">E-mail, WhatsApp e cidade ficam visíveis para quem quiser ajudar nos casos da ONG.</p>
             {error && <p className="form-error" role="alert">{error}</p>}
             <button className="button" type="submit" disabled={busy}>{busy ? "Cadastrando…" : "Cadastrar"}</button>
           </form>

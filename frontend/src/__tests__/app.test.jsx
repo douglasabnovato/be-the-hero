@@ -29,6 +29,12 @@ describe("cadastro e logon", () => {
     expect(screen.getByRole("button", { name: "Copiar ID" })).toBeTruthy();
   });
 
+  it("cadastro avisa que os contatos da ONG ficam públicos (#34)", () => {
+    renderAt("/register");
+    const aviso = screen.getByText("E-mail, WhatsApp e cidade ficam visíveis para quem quiser ajudar nos casos da ONG.");
+    expect(aviso.closest("form").getAttribute("aria-describedby")).toBe(aviso.id);
+  });
+
   it("erros de validação da API aparecem no formulário", async () => {
     routes["POST /ongs"] = [400, { errors: ["UF inválida."] }];
     renderAt("/register");
