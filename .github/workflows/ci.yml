@@ -69,6 +69,9 @@ jobs:
           cache: npm
           cache-dependency-path: mobile/package-lock.json
       - run: npm ci
+      # Versões do app conferidas contra o Expo 57 (#35)
+      - name: Versões do Expo
+        run: npm run check
       - run: npm test
       - run: npx expo export --platform android --output-dir ci-export
   e2e:
