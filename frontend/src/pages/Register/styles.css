@@ -55,6 +55,7 @@
 
 .register-container .content form .input-group input.uf { width: 90px; flex-shrink: 0; }
 .register-container .created code { display: block; font-size: 28px; letter-spacing: 2px; margin: 16px 0; padding: 16px; background: #fff; border-radius: 8px; text-align: center; overflow-wrap: anywhere; }
+.register-container .content form .aviso-publico { margin-top: 16px; font-size: 15px; line-height: 22px; color: #41414d; }
 .register-container .created p { font-size: 18px; color: #41414d; }
 @media (max-width: 800px) {
   .register-container { height: auto; min-height: 100vh; padding: 24px 16px; }

@@ -32,6 +32,9 @@ jobs:
           cache: npm
           cache-dependency-path: backend/package-lock.json
       - run: npm ci
+      # O .npmrc tem ignore-scripts=true: falha aqui se o better-sqlite3 deixar de trazer binário pronto (#36)
+      - name: Binário pronto do better-sqlite3
+        run: node -e "new (require('better-sqlite3'))(':memory:').close()"
       - name: Testes da API no SQLite
         run: npm test
       - name: Testes da API no PostgreSQL
@@ -66,6 +69,9 @@ jobs:
           cache: npm
           cache-dependency-path: mobile/package-lock.json
       - run: npm ci
+      # Versões do app conferidas contra o Expo 57 (#35)
+      - name: Versões do Expo
+        run: npm run check
       - run: npm test
       - run: npx expo export --platform android --output-dir ci-export
   e2e:

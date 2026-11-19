@@ -1,6 +1,10 @@
-/* Testes da seed de demonstração: só dados fictícios, idempotente e bloqueada fora do SQLite (#29) */
+/* Testes da seed de demonstração: só dados fictícios, idempotente e bloqueada fora do SQLite (#29, #36) */
 const { test, before, after } = require("node:test");
 const assert = require("node:assert/strict");
+const { spawnSync } = require("node:child_process");
+const fs = require("node:fs");
+const os = require("node:os");
+const path = require("node:path");
 const request = require("supertest");
 const { createApp } = require("../src/app");
 const { createConnection } = require("../src/database/connection");
@@ -52,4 +56,27 @@ test("recusa rodar fora do SQLite local (IDs públicos não vão para produção
   assert.throws(() => assertLocal("pg"), /nunca no banco de produção/);
   assert.doesNotThrow(() => assertLocal("better-sqlite3"));
 });
+/* Roda o npm run seed de verdade, num processo à parte, com o ambiente dado */
+const rodarSeed = (env) => spawnSync(process.execPath, [path.join(__dirname, "..", "src", "database", "seed-local.js")], { cwd: path.join(__dirname, ".."), env, encoding: "utf8" });
+const semBanco = () => Object.fromEntries(Object.entries(process.env).filter(([k]) => k !== "DATABASE_URL"));
+
+test("npm run seed com DATABASE_URL sai com erro antes de qualquer migração (#36)", () => {
+  /* Porta 1 nunca responde: se o script tentasse migrar, o erro seria de conexão, não a recusa */
+  const r = rodarSeed({ ...semBanco(), DATABASE_URL: "postgres://ninguem:nada@127.0.0.1:1/nada" });
+  assert.equal(r.status, 1);
+  assert.match(r.stderr, /só roda no SQLite local/);
+  assert.doesNotMatch(r.stderr, /ECONNREFUSED|connect/i);
+});
+
+test("npm run seed sem DATABASE_URL migra e semeia um SQLite novo", () => {
+  const arquivo = path.join(os.tmpdir(), `be-the-hero-seed-${process.pid}-${Date.now()}.sqlite`);
+  try {
+    const r = rodarSeed({ ...semBanco(), SQLITE_FILE: arquivo });
+    assert.equal(r.status, 0, r.stderr);
+    assert.match(r.stdout, /2 ONGs e 4 casos/);
+  } finally {
+    fs.rmSync(arquivo, { force: true });
+  }
+});
+
 /* Fim de seed.test.js */
